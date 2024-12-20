@@ -7,6 +7,19 @@ import { SortKey, WIX_SESSION_COOKIE } from 'lib/constants';
 import { cookies } from 'next/headers';
 import { Cart, Collection, Menu, Page, Product, ProductVariant } from './types';
 
+async function a() {
+  const myWixClient = createClient({
+    modules: { products },
+    auth: OAuthStrategy({ clientId: '06fdb6f0-cea0-4151-a873-c8751cc78ecd' })
+  });
+
+  const productList = await myWixClient.products.queryProducts().find();
+
+  console.log('My Products:');
+  console.log('Total: ', productList.items.length);
+  console.log(productList.items.map((item) => item.name).join('\n'));
+}
+
 const cartesian = <T>(data: T[][]) =>
   data.reduce((a, b) => a.flatMap((d) => b.map((e) => [...d, e])), [[]] as T[][]);
 
@@ -506,8 +519,8 @@ export const getWixClient = async () => {
   } catch (e) {}
   const wixClient = createClient({
     auth: OAuthStrategy({
-      clientId: process.env.WIX_CLIENT_ID!,
-      tokens: sessionTokens
+      clientId: process.env.WIX_CLIENT_ID!
+      // tokens: sessionTokens
     })
   });
   return wixClient;
