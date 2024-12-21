@@ -27,12 +27,12 @@ export const metadata = {
   },
   ...(twitterCreator &&
     twitterSite && {
-    twitter: {
-      card: 'summary_large_image',
-      creator: twitterCreator,
-      site: twitterSite
-    }
-  })
+      twitter: {
+        card: 'summary_large_image',
+        creator: twitterCreator,
+        site: twitterSite
+      }
+    })
 };
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
