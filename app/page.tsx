@@ -3,13 +3,12 @@
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
-import './styles.css';
-
 import Image from 'next/image';
+import { FaSearch } from 'react-icons/fa';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
+import './styles.css';
 /* export const metadata = {
   description: 'High-performance ecommerce store built with Next.js, Vercel, and Wix.',
   openGraph: {
@@ -30,23 +29,28 @@ export default function HomePage() {
           quality={100}
         />
         <div className="absolute top-0 flex h-screen w-full items-center justify-center bg-black/35">
-          <div className="w-5/6 max-w-2xl">
-            <h1 className="text-center text-xl font-bold lg:text-4xl">
+          <div className="w-11/12 max-w-2xl">
+            <h1 className="text-center text-2xl font-bold lg:text-4xl">
               Smarter, Faster and Accurate Car Diagnosis you can trust
             </h1>
             <div className="mt-5 flex justify-center">
               <div className="inline-flex justify-center overflow-hidden rounded-full bg-white">
-                <select className="mx-2 bg-white px-4 py-3 text-black">
+                <select className="bg-white py-3 text-black lg:mx-2 lg:px-4">
                   <option>Any Model</option>
                   <option>Audi</option>
                 </select>
-                <select className="mx-2 bg-white px-4 py-3 text-black">
+                <select className="bg-white py-3 text-black lg:mx-2 lg:px-4">
                   <option>Any Make</option>
                 </select>
-                <select className="mx-2 bg-white px-4 py-3 text-black">
+                <select className="bg-white py-3 text-black lg:mx-2 lg:px-4">
                   <option>Any Price</option>
                 </select>
-                <button className="m-1 rounded-full bg-blue-600 px-8 py-3">Search</button>
+                <button className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 lg:block">
+                  Search
+                </button>
+                <button className="m-1 rounded-full bg-blue-600 p-3 lg:hidden">
+                  <FaSearch />
+                </button>
               </div>
             </div>
           </div>
@@ -54,7 +58,7 @@ export default function HomePage() {
       </div>
 
       <br />
-      <div className="mx-2 -mt-20 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:rounded-3.5xl">
+      <div className="-mt-16 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:-mt-20 lg:rounded-3.5xl">
         <div className="mx-auto mt-4 p-4 lg:w-4/5">
           <h2 className="text-center text-2xl font-bold lg:text-start">Brands we have worked on</h2>
         </div>
