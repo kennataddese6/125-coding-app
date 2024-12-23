@@ -10,7 +10,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <div className="relative -z-10 h-screen">
+      <div className="relative -z-10 h-5/6">
         <Image
           src={'/hero-image.png'}
           alt="Hero Image"
@@ -18,7 +18,7 @@ export default function HomePage() {
           height={500}
           className="h-screen w-full object-cover"
         />
-        <div className="absolute top-0 flex h-screen w-full items-center justify-center bg-black">
+        <div className="absolute top-0 flex h-screen w-full items-center justify-center bg-transparent backdrop-blur-sm">
           <div className="max-w-2xl">
             <h1 className="text-center text-4xl">
               Smarter, Faster and Accurate Car Diagnosis you can trust
@@ -41,7 +41,20 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      {/*    <ThreeItemGrid />
+      <div className="mx-10 -mt-20 rounded-t-3xl bg-white p-5 text-black">
+        <div className="mx-auto mt-4 p-5 lg:w-4/5">
+          <h2 className="text-xl font-bold">Brands we have worked</h2>
+          <ul className="flex justify-between py-5">
+            <li>Lamborginin</li>
+            <li>Porsche</li>
+            <li>Land Rover</li>
+            <li>Mercedes</li>
+            <li>Ford</li>
+            <li>Volswagen</li>
+          </ul>
+        </div>
+      </div>
+      {/* <ThreeItemGrid /  >
       <Carousel />
       <Footer /> */}
     </>
