@@ -10,18 +10,18 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <div className="relative -z-10 h-5/6">
+      <div className="relative -z-10 h-5/6 bg-fixed">
         <Image
           src={'/hero-image.png'}
           alt="Hero Image"
           width={500}
           height={500}
-          className="h-screen w-full"
+          className="h-screen w-full bg-cover lg:bg-fixed"
           quality={100}
         />
         <div className="absolute top-0 flex h-screen w-full items-center justify-center bg-black/35">
-          <div className="max-w-2xl">
-            <h1 className="text-center text-4xl font-bold">
+          <div className="w-5/6 max-w-2xl">
+            <h1 className="text-center text-xl font-bold lg:text-4xl">
               Smarter, Faster and Accurate Car Diagnosis you can trust
             </h1>
             <div className="mt-5 flex justify-center">
@@ -42,12 +42,18 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="rounded-5xl mx-10 -mt-20 bg-white p-4 text-black">
+      <div className="rounded-5xl -mt-20 bg-white p-4 text-black lg:mx-10">
         <div className="mx-auto mt-4 p-4 lg:w-4/5">
-          <h2 className="text-2xl font-bold">Brands we have worked</h2>
-          <ul className="flex justify-between py-5">
-            <li className="text-center">
-              <Image width={50} height={50} alt="audi" src={'/audi.png'} />
+          <h2 className="text-2xl font-bold">Brands we have worked on</h2>
+          <ul className="flex flex-wrap justify-between py-5">
+            <li>
+              <Image
+                width={50}
+                height={50}
+                alt="audi"
+                src={'/audi.png'}
+                className="mx-auto block"
+              />
               Audi
             </li>
             <li className="text-center">
@@ -71,6 +77,9 @@ export default function HomePage() {
               Lamborghini
             </li>
           </ul>
+        </div>
+        <div className="mx-auto mt-4 p-4 lg:w-4/5">
+          <h2 className="text-2xl font-bold">Explore all products</h2>
         </div>
       </div>
       {/* <ThreeItemGrid /  >
