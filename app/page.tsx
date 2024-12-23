@@ -42,9 +42,9 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="rounded-5xl mx-10 -mt-20 bg-white p-5 text-black">
-        <div className="mx-auto mt-4 p-5 lg:w-4/5">
-          <h2 className="text-xl font-bold">Brands we have worked</h2>
+      <div className="rounded-5xl mx-10 -mt-20 bg-white p-4 text-black">
+        <div className="mx-auto mt-4 p-4 lg:w-4/5">
+          <h2 className="text-2xl font-bold">Brands we have worked</h2>
           <ul className="flex justify-between py-5">
             <li className="text-center">
               <Image width={50} height={50} alt="audi" src={'/audi.png'} />
