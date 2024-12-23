@@ -54,7 +54,7 @@ export default function HomePage() {
       </div>
 
       <br />
-      <div className="lg:rounded-s-3.5xl -mt-20 rounded-3xl bg-white p-4 text-black lg:mx-10">
+      <div className="-mt-20 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:rounded-3.5xl">
         <div className="mx-auto mt-4 p-4 lg:w-4/5">
           <h2 className="text-2xl font-bold">Brands we have worked on</h2>
         </div>
@@ -76,6 +76,270 @@ export default function HomePage() {
               }
             }}
           >
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/audi.png'}
+                  className="object-cover"
+                />
+                Audi
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/ford.png'}
+                  className="object-cover"
+                />
+                BMW
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/bmw.png'}
+                  className="object-cover"
+                />
+                Ford
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/mercedes.png'}
+                  className="object-cover"
+                />
+                Mercedes
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image width={50} height={50} alt="audi" src={'/vw.png'} className="object-cover" />
+                Volswagen
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/lambo.png'}
+                  className="object-cover"
+                />
+                Lamborghini
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/audi.png'}
+                  className="object-cover"
+                />
+                Audi
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/ford.png'}
+                  className="object-cover"
+                />
+                BMW
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/bmw.png'}
+                  className="object-cover"
+                />
+                Ford
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/mercedes.png'}
+                  className="object-cover"
+                />
+                Mercedes
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image width={50} height={50} alt="audi" src={'/vw.png'} className="object-cover" />
+                Volswagen
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/lambo.png'}
+                  className="object-cover"
+                />
+                Lamborghini
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/audi.png'}
+                  className="object-cover"
+                />
+                Audi
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/ford.png'}
+                  className="object-cover"
+                />
+                BMW
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/bmw.png'}
+                  className="object-cover"
+                />
+                Ford
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/mercedes.png'}
+                  className="object-cover"
+                />
+                Mercedes
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image width={50} height={50} alt="audi" src={'/vw.png'} className="object-cover" />
+                Volswagen
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/lambo.png'}
+                  className="object-cover"
+                />
+                Lamborghini
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/audi.png'}
+                  className="object-cover"
+                />
+                Audi
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/ford.png'}
+                  className="object-cover"
+                />
+                BMW
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/bmw.png'}
+                  className="object-cover"
+                />
+                Ford
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/mercedes.png'}
+                  className="object-cover"
+                />
+                Mercedes
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image width={50} height={50} alt="audi" src={'/vw.png'} className="object-cover" />
+                Volswagen
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/lambo.png'}
+                  className="object-cover"
+                />
+                Lamborghini
+              </div>
+            </SwiperSlide>
             <SwiperSlide className="text-black">
               <div className="mx-auto block h-16 w-16">
                 <Image
