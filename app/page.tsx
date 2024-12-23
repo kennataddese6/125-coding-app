@@ -20,13 +20,13 @@ import 'swiper/css/pagination';
 export default function HomePage() {
   return (
     <>
-      <div className="relative -z-10 h-5/6 bg-fixed">
+      <div className="relative -z-10 h-5/6">
         <Image
           src={'/hero-image.png'}
           alt="Hero Image"
           width={500}
           height={500}
-          className="h-screen w-full bg-cover lg:bg-fixed"
+          className="h-screen w-full object-cover lg:object-fill"
           quality={100}
         />
         <div className="absolute top-0 flex h-screen w-full items-center justify-center bg-black/35">
@@ -54,9 +54,9 @@ export default function HomePage() {
       </div>
 
       <br />
-      <div className="-mt-20 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:rounded-3.5xl">
+      <div className="mx-2 -mt-20 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:rounded-3.5xl">
         <div className="mx-auto mt-4 p-4 lg:w-4/5">
-          <h2 className="text-2xl font-bold">Brands we have worked on</h2>
+          <h2 className="text-center text-2xl font-bold lg:text-start">Brands we have worked on</h2>
         </div>
         <div className="mt-4 py-3">
           <Swiper
@@ -409,7 +409,7 @@ export default function HomePage() {
           </Swiper>
         </div>
         <div className="mx-auto mt-4 p-4 lg:w-4/5">
-          <h2 className="text-2xl font-bold">Explore all products</h2>
+          <h2 className="text-center text-2xl font-bold lg:text-start">Explore all products</h2>
         </div>
       </div>
       {/* <ThreeItemGrid /  >
