@@ -46,19 +46,30 @@ export default function HomePage() {
         <div className="mx-auto mt-4 p-5 lg:w-4/5">
           <h2 className="text-xl font-bold">Brands we have worked</h2>
           <ul className="flex justify-between py-5">
-            <li>
+            <li className="text-center">
               <Image width={50} height={50} alt="audi" src={'/audi.png'} />
               Audi
             </li>
-            <li>
-              <Image width={50} height={50} alt="audi" src={'/audi.png'} />
-              Audi
+            <li className="text-center">
+              <Image width={50} height={50} alt="audi" src={'/ford.png'} />
+              BMW
             </li>
-            <li>Porsche</li>
-            <li>Land Rover</li>
-            <li>Mercedes</li>
-            <li>Ford</li>
-            <li>Volswagen</li>
+            <li className="text-center">
+              <Image width={50} height={50} alt="audi" src={'/bmw.png'} />
+              Ford
+            </li>
+            <li className="text-center">
+              <Image width={50} height={50} alt="audi" src={'/mercedes.png'} />
+              Mercedes
+            </li>
+            <li className="text-center">
+              <Image width={50} height={50} alt="audi" src={'/vw.png'} />
+              Volkswagen
+            </li>
+            <li className="text-center">
+              <Image width={50} height={50} alt="audi" src={'/lambo.png'} />
+              Lamborghini
+            </li>
           </ul>
         </div>
       </div>
