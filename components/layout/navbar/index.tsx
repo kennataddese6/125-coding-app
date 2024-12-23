@@ -59,6 +59,9 @@ export async function Navbar() {
           </ul>
           <CartModal />
         </div>
+        <div className="lg:hidden">
+          <CartModal />
+        </div>
       </div>
     </nav>
   );
