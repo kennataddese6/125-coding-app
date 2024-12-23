@@ -16,11 +16,12 @@ export default function HomePage() {
           alt="Hero Image"
           width={500}
           height={500}
-          className="h-screen w-full object-cover"
+          className="h-screen w-full"
+          quality={100}
         />
-        <div className="absolute top-0 flex h-screen w-full items-center justify-center bg-transparent backdrop-blur-sm">
+        <div className="absolute top-0 flex h-screen w-full items-center justify-center bg-black/35">
           <div className="max-w-2xl">
-            <h1 className="text-center text-4xl">
+            <h1 className="text-center text-4xl font-bold">
               Smarter, Faster and Accurate Car Diagnosis you can trust
             </h1>
             <div className="mt-5 flex justify-center">
@@ -41,11 +42,18 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="mx-10 -mt-20 rounded-t-3xl bg-white p-5 text-black">
+      <div className="rounded-5xl mx-10 -mt-20 bg-white p-5 text-black">
         <div className="mx-auto mt-4 p-5 lg:w-4/5">
           <h2 className="text-xl font-bold">Brands we have worked</h2>
           <ul className="flex justify-between py-5">
-            <li>Lamborginin</li>
+            <li>
+              <Image width={50} height={50} alt="audi" src={'/audi.png'} />
+              Audi
+            </li>
+            <li>
+              <Image width={50} height={50} alt="audi" src={'/audi.png'} />
+              Audi
+            </li>
             <li>Porsche</li>
             <li>Land Rover</li>
             <li>Mercedes</li>
