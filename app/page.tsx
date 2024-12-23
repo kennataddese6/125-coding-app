@@ -62,9 +62,9 @@ export default function HomePage() {
         <div className="mx-auto mt-4 p-4 lg:w-4/5">
           <h2 className="text-center text-2xl font-bold lg:text-start">Brands we have worked on</h2>
         </div>
-        <div className="mt-4 py-3">
+        <div className="py-2">
           <Swiper
-            slidesPerView={2}
+            slidesPerView={1}
             spaceBetween={20}
             centeredSlides={true}
             autoplay={{
