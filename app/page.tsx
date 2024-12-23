@@ -54,7 +54,7 @@ export default function HomePage() {
       </div>
 
       <br />
-      <div className="rounded-5xl -mt-20 bg-white p-4 text-black lg:mx-10">
+      <div className="lg:rounded-s-3.5xl -mt-20 rounded-3xl bg-white p-4 text-black lg:mx-10">
         <div className="mx-auto mt-4 p-4 lg:w-4/5">
           <h2 className="text-2xl font-bold">Brands we have worked on</h2>
         </div>
