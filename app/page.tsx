@@ -1,12 +1,22 @@
-import Image from 'next/image';
+'use client';
+// Import Swiper React components
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import './styles.css';
 
-export const metadata = {
+import Image from 'next/image';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+/* export const metadata = {
   description: 'High-performance ecommerce store built with Next.js, Vercel, and Wix.',
   openGraph: {
     type: 'website'
   }
 };
-
+ */
 export default function HomePage() {
   return (
     <>
@@ -42,41 +52,97 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
+      <br />
       <div className="rounded-5xl -mt-20 bg-white p-4 text-black lg:mx-10">
         <div className="mx-auto mt-4 p-4 lg:w-4/5">
           <h2 className="text-2xl font-bold">Brands we have worked on</h2>
-          <ul className="flex flex-wrap justify-between py-5">
-            <li>
-              <Image
-                width={50}
-                height={50}
-                alt="audi"
-                src={'/audi.png'}
-                className="mx-auto block"
-              />
-              Audi
-            </li>
-            <li className="text-center">
-              <Image width={50} height={50} alt="audi" src={'/ford.png'} />
-              BMW
-            </li>
-            <li className="text-center">
-              <Image width={50} height={50} alt="audi" src={'/bmw.png'} />
-              Ford
-            </li>
-            <li className="text-center">
-              <Image width={50} height={50} alt="audi" src={'/mercedes.png'} />
-              Mercedes
-            </li>
-            <li className="text-center">
-              <Image width={50} height={50} alt="audi" src={'/vw.png'} />
-              Volkswagen
-            </li>
-            <li className="text-center">
-              <Image width={50} height={50} alt="audi" src={'/lambo.png'} />
-              Lamborghini
-            </li>
-          </ul>
+        </div>
+        <div className="mt-4 py-3">
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={20}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false
+            }}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper w-full"
+            breakpoints={{
+              480: { slidesPerView: 2 },
+              1024: {
+                slidesPerView: 4
+              }
+            }}
+          >
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/audi.png'}
+                  className="object-cover"
+                />
+                Audi
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/ford.png'}
+                  className="object-cover"
+                />
+                BMW
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/bmw.png'}
+                  className="object-cover"
+                />
+                Ford
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/mercedes.png'}
+                  className="object-cover"
+                />
+                Mercedes
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image width={50} height={50} alt="audi" src={'/vw.png'} className="object-cover" />
+                Volswagen
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="text-black">
+              <div className="mx-auto block h-16 w-16">
+                <Image
+                  width={50}
+                  height={50}
+                  alt="audi"
+                  src={'/lambo.png'}
+                  className="object-cover"
+                />
+                Lamborghini
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
         <div className="mx-auto mt-4 p-4 lg:w-4/5">
           <h2 className="text-2xl font-bold">Explore all products</h2>
