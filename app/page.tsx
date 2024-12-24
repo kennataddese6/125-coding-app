@@ -28,7 +28,7 @@ export default function HomePage() {
             </h1>
             <div className="mt-5 flex justify-center">
               <div className="inline-flex justify-center overflow-hidden rounded-full border border-white bg-black/5 text-white backdrop:blur-sm lg:bg-white lg:text-black">
-                <select className="bg-transparent px-1 py-3 lg:mx-2 lg:bg-white lg:px-4">
+                <select className="max-w-26 bg-transparent px-1 py-3 lg:mx-2 lg:bg-white lg:px-4">
                   <option>Any Model</option>
                   <option>Audi</option>
                   <option>Volswagen</option>
@@ -43,8 +43,8 @@ export default function HomePage() {
                   <option>Porshe</option>
                   <option>Land Rover</option>
                 </select>
-                <select className="bg-transparent py-3 lg:mx-2 lg:bg-white lg:px-4">
-                  <option>Any Make</option>
+                <select className="w-20 bg-transparent py-3 lg:mx-2 lg:w-auto lg:bg-white lg:px-4">
+                  <option>Any Product</option>
                   <option>Apple Car Play</option>
                   <option>Android Auto</option>
                   <option>Reverse Cameras</option>
