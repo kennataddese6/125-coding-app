@@ -73,44 +73,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      {/*     <div className="relative -z-10 h-5/6">
-        <Image
-          src={'/hero-image.png'}
-          alt="Hero Image"
-          width={500}
-          height={500}
-          className="h-screen w-full object-cover lg:object-fill"
-          quality={100}
-        />
-        <div className="absolute top-0 flex h-screen w-full items-center justify-center bg-black/35">
-          <div className="w-11/12 max-w-2xl">
-            <h1 className="text-center text-2xl font-bold lg:text-4xl">
-              Smarter, Faster and Accurate Car Diagnosis you can trust
-            </h1>
-            <div className="mt-5 flex justify-center">
-              <div className="inline-flex justify-center overflow-hidden rounded-full border border-white bg-black/5 text-white backdrop:blur-sm lg:bg-white lg:text-black">
-                <select className="bg-transparent px-1 py-3 lg:mx-2 lg:bg-white lg:px-4">
-                  <option>Any Model</option>
-                  <option>Audi</option>
-                </select>
-                <select className="bg-transparent py-3 lg:mx-2 lg:bg-white lg:px-4">
-                  <option>Any Make</option>
-                </select>
-                <select className="bg-transparent py-3 lg:mx-2 lg:bg-white lg:px-4">
-                  <option>Any Price</option>
-                </select>
-                <button className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 text-white lg:block">
-                  <FaSearch className="inline" /> Search
-                </button>
-                <button className="m-1 rounded-full bg-blue-600 p-3 lg:hidden">
-                  <FaSearch />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
- */}
       <br />
       <div className="-mt-16 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:-mt-20 lg:rounded-3.5xl">
         <div className="mx-auto mt-4 p-4 lg:w-4/5">

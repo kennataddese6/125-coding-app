@@ -1,3 +1,4 @@
+'use server';
 import { items } from '@wix/data';
 import { currentCart, recommendations } from '@wix/ecom';
 import { redirects } from '@wix/redirects';
