@@ -20,7 +20,60 @@ import './styles.css';
 export default function HomePage() {
   return (
     <>
-      <div className="relative -z-10 h-5/6">
+      <div className="h-screen bg-blue-600 bg-[url('/hero-image.png')] bg-cover bg-fixed bg-no-repeat">
+        <div className="flex h-screen w-full items-center justify-center bg-black/35">
+          <div className="w-11/12 max-w-2xl">
+            <h1 className="text-center text-2xl font-bold lg:text-4xl">
+              Smarter, Faster and Accurate Car Diagnosis you can trust
+            </h1>
+            <div className="mt-5 flex justify-center">
+              <div className="inline-flex justify-center overflow-hidden rounded-full border border-white bg-black/5 text-white backdrop:blur-sm lg:bg-white lg:text-black">
+                <select className="bg-transparent px-1 py-3 lg:mx-2 lg:bg-white lg:px-4">
+                  <option>Any Model</option>
+                  <option>Audi</option>
+                  <option>Volswagen</option>
+                  <option>Seat</option>
+                  <option>Skoda</option>
+                  <option>Lamborghini</option>
+                  <option>BMW</option>
+                  <option>Mini</option>
+                  <option>Mercedes</option>
+                  <option>Ford</option>
+                  <option>Mazda</option>
+                  <option>Porshe</option>
+                  <option>Land Rover</option>
+                </select>
+                <select className="bg-transparent py-3 lg:mx-2 lg:bg-white lg:px-4">
+                  <option>Any Make</option>
+                  <option>Apple Car Play</option>
+                  <option>Android Auto</option>
+                  <option>Reverse Cameras</option>
+                  <option>Vechile Security</option>
+                  <option>Dash Camera</option>
+                  <option>Entertainment</option>
+                </select>
+                <select className="bg-transparent py-3 lg:mx-2 lg:bg-white lg:px-4">
+                  <option>Any Price</option>
+                  <option> 50$</option>
+                  <option>100$</option>
+                  <option>150$</option>
+                  <option>200$</option>
+                  <option>250$</option>
+                  <option>300$</option>
+                  <option>350$</option>
+                </select>
+                <button className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 text-white lg:block">
+                  <FaSearch className="inline" /> Search
+                </button>
+                <button className="m-1 rounded-full bg-blue-600 p-3 lg:hidden">
+                  <FaSearch />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*     <div className="relative -z-10 h-5/6">
         <Image
           src={'/hero-image.png'}
           alt="Hero Image"
@@ -47,7 +100,7 @@ export default function HomePage() {
                   <option>Any Price</option>
                 </select>
                 <button className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 text-white lg:block">
-                  <FaSearch className="inline" fontWeight={200} /> Search
+                  <FaSearch className="inline" /> Search
                 </button>
                 <button className="m-1 rounded-full bg-blue-600 p-3 lg:hidden">
                   <FaSearch />
@@ -57,7 +110,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
+ */}
       <br />
       <div className="-mt-16 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:-mt-20 lg:rounded-3.5xl">
         <div className="mx-auto mt-4 p-4 lg:w-4/5">
@@ -480,6 +533,54 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
+      <h1>Hello world</h1>
       {/* <ThreeItemGrid /  >
       <Carousel />
       <Footer /> */}
