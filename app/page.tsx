@@ -22,13 +22,13 @@ export default function HomePage() {
     <>
       <div className="h-screen bg-blue-600 bg-[url('/hero-image.png')] bg-cover bg-fixed bg-no-repeat">
         <div className="flex h-screen w-full items-center justify-center bg-black/35">
-          <div className="w-11/12 max-w-2xl">
+          <div className="w-full max-w-2xl">
             <h1 className="text-center text-2xl font-bold lg:text-4xl">
               Smarter, Faster and Accurate Car Diagnosis you can trust
             </h1>
             <div className="mt-5 flex justify-center">
-              <div className="inline-flex justify-center overflow-hidden rounded-full border border-white bg-black/5 text-white backdrop:blur-sm lg:bg-white lg:text-black">
-                <select className="max-w-26 bg-transparent px-1 py-3 lg:mx-2 lg:bg-white lg:px-4">
+              <div className="mx-1 inline-flex w-screen justify-between overflow-hidden rounded-full border border-white bg-black/5 text-white backdrop:blur-sm lg:w-auto lg:bg-white lg:text-black">
+                <select className="max-w-26 w-28 bg-transparent px-1 py-3 lg:mx-2 lg:w-auto lg:bg-white lg:px-4">
                   <option>Any Model</option>
                   <option>Audi</option>
                   <option>Volswagen</option>
@@ -43,8 +43,8 @@ export default function HomePage() {
                   <option>Porshe</option>
                   <option>Land Rover</option>
                 </select>
-                <select className="w-20 bg-transparent py-3 lg:mx-2 lg:w-auto lg:bg-white lg:px-4">
-                  <option>Any Product</option>
+                <select className="w-24 bg-transparent py-3 lg:mx-2 lg:w-28 lg:bg-white lg:px-4">
+                  <option>Product</option>
                   <option>Apple Car Play</option>
                   <option>Android Auto</option>
                   <option>Reverse Cameras</option>
@@ -135,7 +135,7 @@ export default function HomePage() {
             }}
           >
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -147,7 +147,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -159,7 +159,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -171,7 +171,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -183,13 +183,13 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image width={50} height={50} alt="audi" src={'/vw.png'} className="object-cover" />
                 Volswagen
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -201,7 +201,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -213,7 +213,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -225,7 +225,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -237,7 +237,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -249,13 +249,13 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image width={50} height={50} alt="audi" src={'/vw.png'} className="object-cover" />
                 Volswagen
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -267,7 +267,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -279,7 +279,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -291,7 +291,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -303,7 +303,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -315,13 +315,13 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image width={50} height={50} alt="audi" src={'/vw.png'} className="object-cover" />
                 Volswagen
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -333,7 +333,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -345,7 +345,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -357,7 +357,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -369,7 +369,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -381,13 +381,13 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image width={50} height={50} alt="audi" src={'/vw.png'} className="object-cover" />
                 Volswagen
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -399,7 +399,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -411,7 +411,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -423,7 +423,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -435,7 +435,7 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
@@ -447,13 +447,13 @@ export default function HomePage() {
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image width={50} height={50} alt="audi" src={'/vw.png'} className="object-cover" />
                 Volswagen
               </div>
             </SwiperSlide>
             <SwiperSlide className="text-black">
-              <div className="mx-auto block h-16 w-16 p-2">
+              <div className="h-16 w-16 p-2">
                 <Image
                   width={50}
                   height={50}
