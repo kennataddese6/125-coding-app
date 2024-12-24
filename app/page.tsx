@@ -46,8 +46,8 @@ export default function HomePage() {
                 <select className="bg-transparent py-3 lg:mx-2 lg:bg-white lg:px-4">
                   <option>Any Price</option>
                 </select>
-                <button className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 lg:block">
-                  Search
+                <button className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 text-white lg:block">
+                  <FaSearch className="inline" fontWeight={200} /> Search
                 </button>
                 <button className="m-1 rounded-full bg-blue-600 p-3 lg:hidden">
                   <FaSearch />
