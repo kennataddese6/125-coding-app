@@ -1,11 +1,9 @@
 import CartModal from 'components/cart/modal';
-import LogoSquare from 'components/logo-square';
 import { getMenu } from 'lib/shopify';
 import { Menu } from 'lib/shopify/types';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import MobileMenu from './mobile-menu';
-import Search, { SearchSkeleton } from './search';
 
 const { SITE_NAME } = process.env;
 
@@ -13,20 +11,20 @@ export async function Navbar() {
   const menu = await getMenu('next-js-frontend-header-menu');
 
   return (
-    <nav className="relative flex items-center justify-between p-4 lg:px-6">
+    <nav className="fixed flex w-full items-center justify-between p-4 lg:px-6">
       <div className="block flex-none md:hidden">
         <Suspense fallback={null}>
           <MobileMenu menu={menu} />
         </Suspense>
       </div>
-      <div className="flex w-full items-center">
+      <div className="flex w-full items-center justify-between">
         <div className="flex w-full md:w-1/3">
           <Link
             href="/"
             prefetch={true}
             className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6"
           >
-            <LogoSquare />
+            {/* <LogoSquare /> */}
             <div className="ml-2 flex-none text-sm font-medium uppercase md:hidden lg:block">
               {SITE_NAME}
             </div>
@@ -47,13 +45,24 @@ export async function Navbar() {
             </ul>
           ) : null}
         </div>
-        <div className="hidden justify-center md:flex md:w-1/3">
+        {/* <div className="hidden justify-center md:flex md:w-1/3">
           <Suspense fallback={<SearchSkeleton />}>
             <Search />
           </Suspense>
+        </div> */}
+        <div className="hidden items-center justify-end md:flex">
+          <ul className="flex">
+            <li className="mx-5 cursor-pointer">Home</li>
+            <li className="mx-5 cursor-pointer">
+              <Link href={'/products'}>Products</Link>
+            </li>
+            <li className="mx-5 cursor-pointer">About</li>
+            <li className="mx-5 cursor-pointer">Contact</li>
+          </ul>
+          <CartModal color="text-white" />
         </div>
-        <div className="flex justify-end md:w-1/3">
-          <CartModal />
+        <div className="lg:hidden">
+          <CartModal color="text-white" />
         </div>
       </div>
     </nav>

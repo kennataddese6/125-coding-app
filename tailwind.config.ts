@@ -6,8 +6,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-geist-sans)']
+        sans: ['var(--font-dm_sans)']
       },
+      borderRadius: { '3.5xl': '3.5rem' },
       keyframes: {
         fadeIn: {
           from: { opacity: '0' },
