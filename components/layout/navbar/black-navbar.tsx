@@ -11,7 +11,7 @@ export async function BlackNavbar() {
   const menu = await getMenu('next-js-frontend-header-menu');
 
   return (
-    <nav className="sticky top-0 z-10 flex w-full items-center justify-between p-4 text-black lg:px-6">
+    <nav className="sticky top-0 z-10 flex w-full items-center justify-between p-4 text-black lg:px-32">
       <div className="block flex-none md:hidden">
         <Suspense fallback={null}>
           <MobileMenu menu={menu} />

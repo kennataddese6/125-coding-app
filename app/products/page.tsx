@@ -16,7 +16,7 @@ export default async function Page(props: {
   return (
     <>
       <BlackNavbar />
-      <div className="text-black lg:px-6">
+      <div className="text-black lg:px-32">
         <h1 className="my-4 py-5 text-3xl font-bold">Products</h1>
         {searchValue ? (
           <p className="mb-4">
