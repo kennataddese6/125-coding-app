@@ -16,6 +16,7 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
+    "paths": { "@/*": ["./app/*"] },
     "noUncheckedIndexedAccess": true,
     "plugins": [
       {

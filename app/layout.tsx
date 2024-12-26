@@ -45,7 +45,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
 
   return (
     <html lang="en" className={dm_sans.variable}>
-      <body className="bg-neutral-50 text-black selection:bg-teal-300 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
+      <body className="bg-neutral-50 text-white selection:bg-teal-300 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
         <CartProvider cartPromise={cart}>
           <main>
             {children}

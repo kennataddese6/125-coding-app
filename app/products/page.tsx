@@ -1,3 +1,9 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from '@/components/ui/accordion';
 import Grid from 'components/grid';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
 import ProductGridItems from 'components/layout/product-grid-items';
@@ -16,7 +22,7 @@ export default async function Page(props: {
   return (
     <>
       <BlackNavbar />
-      <div className="text-black lg:px-32">
+      <div className="mx-2 text-black lg:px-32">
         <h1 className="my-4 py-5 text-3xl font-bold">Products</h1>
         {searchValue ? (
           <p className="mb-4">
@@ -27,9 +33,39 @@ export default async function Page(props: {
           </p>
         ) : null}
         {products.length > 0 ? (
-          <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            <ProductGridItems products={products} />
-          </Grid>
+          <div className="flex">
+            <div className="hidden pr-8 lg:flex lg:w-1/4">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Make/Model</AccordionTrigger>
+                  <AccordionContent>
+                    <div>
+                      <input type="checkbox" id="model" className="bg-white text-white" />
+                      <label htmlFor="model">Audi</label>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>Product type</AccordionTrigger>
+                  <AccordionContent>
+                    Yes. It comes with default styles that matches the other components&apos;
+                    aesthetic.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Price</AccordionTrigger>
+                  <AccordionContent>
+                    Yes. It's animated by default, but you can disable it if you prefer.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+            <div className="w-full lg:w-3/4">
+              <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <ProductGridItems products={products} />
+              </Grid>
+            </div>
+          </div>
         ) : null}
       </div>
     </>
