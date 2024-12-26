@@ -52,12 +52,12 @@ export async function Navbar() {
         </div> */}
         <div className="hidden items-center justify-end md:flex">
           <ul className="flex">
-            <li className="mx-5 cursor-pointer">Home</li>
-            <li className="mx-5 cursor-pointer">
+            <li className="mx-5 cursor-pointer rounded-md border-b-2 border-b-white p-1">Home</li>
+            <li className="mx-5 cursor-pointer p-1">
               <Link href={'/products'}>Products</Link>
             </li>
-            <li className="mx-5 cursor-pointer">About</li>
-            <li className="mx-5 cursor-pointer">Contact</li>
+            <li className="mx-5 cursor-pointer p-1">About</li>
+            <li className="mx-5 cursor-pointer p-1">Contact</li>
           </ul>
           <CartModal color="text-white" />
         </div>
