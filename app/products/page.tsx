@@ -8,15 +8,25 @@ import Grid from 'components/grid';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
-import { getProducts } from 'lib/shopify';
+import { getCollectionProducts, getProducts } from 'lib/shopify';
 
 export default async function Page(props: {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined } & { model: string }>;
 }) {
   const searchParams = await props.searchParams;
   const { sort, q: searchValue } = searchParams as { [key: string]: string };
   const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || defaultSort;
-  const products = await getProducts({ sortKey, reverse, query: searchValue });
+  let products;
+  if (searchParams?.model) {
+    products = await getCollectionProducts({
+      collection: searchParams.model,
+      sortKey,
+      reverse
+    });
+  } else {
+    products = await getProducts({ sortKey, reverse, query: searchValue });
+  }
+
   const resultsText = products.length > 1 ? 'results' : 'result';
 
   return (
