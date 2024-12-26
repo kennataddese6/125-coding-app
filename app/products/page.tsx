@@ -39,51 +39,51 @@ export default async function Page(props: {
                 <AccordionItem value="item-1">
                   <AccordionTrigger>Make/Model</AccordionTrigger>
                   <AccordionContent>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Audi</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Volswagen</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Seat</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Skoda</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Lamborghini</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">BMW</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Mini</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Mercedes</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Ford</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Mazda</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Porshe</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Land Rover</label>
                     </div>
@@ -92,23 +92,23 @@ export default async function Page(props: {
                 <AccordionItem value="item-2">
                   <AccordionTrigger>Product type</AccordionTrigger>
                   <AccordionContent>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Apple CarPlay</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Reverse Cameras</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Vehicle Security</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Dash Camera</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Entertainment upgrades</label>
                     </div>
@@ -117,23 +117,23 @@ export default async function Page(props: {
                 <AccordionItem value="item-3">
                   <AccordionTrigger>Price</AccordionTrigger>
                   <AccordionContent>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">Less than 100$</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">100$ up to 200$</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">200$ up to 300$</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">400$ up to 500$</label>
                     </div>
-                    <div className="my-1 flex items-center gap-2">
+                    <div className="my-2 flex items-center gap-3">
                       <input type="checkbox" id="model" />
                       <label htmlFor="model">500$ up to 600$</label>
                     </div>
