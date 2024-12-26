@@ -52,10 +52,12 @@ export async function BlackNavbar() {
         </div> */}
         <div className="hidden items-center justify-end md:flex">
           <ul className="flex">
-            <li className="mx-5 cursor-pointer">Home</li>
-            <li className="mx-5 cursor-pointer">Products</li>
-            <li className="mx-5 cursor-pointer">About</li>
-            <li className="mx-5 cursor-pointer">Contact</li>
+            <li className="mx-5 cursor-pointer p-1">Home</li>
+            <li className="mx-5 cursor-pointer rounded-md border-b-2 border-b-blue-600 p-1">
+              Products
+            </li>
+            <li className="mx-5 cursor-pointer p-1">About</li>
+            <li className="mx-5 cursor-pointer p-1">Contact</li>
           </ul>
           <CartModal color="text-black" />
         </div>
