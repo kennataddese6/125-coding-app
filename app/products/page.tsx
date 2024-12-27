@@ -17,8 +17,20 @@ export default async function Page(props: {
   const searchParams = await props.searchParams;
   const { sort, q: searchValue } = searchParams as { [key: string]: string };
   const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || defaultSort;
-  let products;
-  if (searchParams?.model) {
+  let products: any = [];
+  if (Array.isArray(searchParams?.model)) {
+    const productPromises = searchParams?.model.map(async (item) => {
+      console.log('item', item);
+      return await getCollectionProducts({
+        collection: item,
+        sortKey,
+        reverse
+      });
+    });
+
+    const results = await Promise.all(productPromises);
+    products = results.flat(); // Flatten the array of arrays into a single array
+  } else if (searchParams?.model) {
     products = await getCollectionProducts({
       collection: searchParams.model,
       sortKey,

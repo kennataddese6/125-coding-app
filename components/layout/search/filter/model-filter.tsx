@@ -4,7 +4,8 @@ import { useSearchParams } from 'next/navigation';
 
 export default function ModelFilter() {
   const searchParams = useSearchParams();
-  const urlSearch = searchParams.get('model') || '';
+  const urlSearch = searchParams.getAll('model') || '';
+  console.log(urlSearch, 'url search');
   const { createModelQuery } = useChangeUrl();
   return (
     <>
@@ -12,7 +13,7 @@ export default function ModelFilter() {
         <input
           type="checkbox"
           id="model"
-          checked={urlSearch === 'audi'}
+          checked={urlSearch.some((a) => a === 'audi')}
           onChange={(e) => createModelQuery(e.target.checked ? 'audi' : '')}
         />
         <label htmlFor="model">Audi</label>
@@ -21,7 +22,7 @@ export default function ModelFilter() {
         <input
           type="checkbox"
           id="model"
-          checked={urlSearch === 'volswagen'}
+          checked={urlSearch.some((a) => a === 'volswagen')}
           onChange={(e) => createModelQuery(e.target.checked ? 'volswagen' : '')}
         />
         <label htmlFor="model">Volswagen</label>
