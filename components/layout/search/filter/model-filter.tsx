@@ -14,7 +14,7 @@ export default function ProductFilter() {
   const urlTypeSearch = searchParams.getAll('type') || '';
   const { createModelQuery, createTypeQuery, deleteModelQuery, deleteTypeQuery } = useChangeUrl();
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion type="multiple" className="w-full">
       <AccordionItem value="item-1">
         <AccordionTrigger>Make/Model</AccordionTrigger>
         <AccordionContent>
