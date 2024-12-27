@@ -4,6 +4,7 @@ import ProductGridItems from 'components/layout/product-grid-items';
 import ProductFilter from 'components/layout/search/filter/model-filter';
 import { defaultSort, sorting } from 'lib/constants';
 import { getCollectionProducts, getProducts } from 'lib/shopify';
+import { Product } from 'lib/shopify/types';
 
 export default async function Page(props: {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined } & { model: string }>;
@@ -11,28 +12,55 @@ export default async function Page(props: {
   const searchParams = await props.searchParams;
   const { sort, q: searchValue } = searchParams as { [key: string]: string };
   const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || defaultSort;
-  let products: any = [];
-  if (Array.isArray(searchParams?.model)) {
-    const productPromises = searchParams?.model.map(async (item) => {
-      console.log('item', item);
+  let products: any;
+  const getProductPromises = (paramArray: string[], paramName: string) => {
+    return paramArray.map(async (item) => {
       return await getCollectionProducts({
         collection: item,
         sortKey,
         reverse
       });
     });
+  };
 
+  let combinedResults: Product[] = [];
+
+  if (Array.isArray(searchParams?.model)) {
+    const productPromises = getProductPromises(searchParams.model, 'model');
     const results = await Promise.all(productPromises);
-    products = results.flat(); // Flatten the array of arrays into a single array
+    combinedResults.push(...results.flat());
   } else if (searchParams?.model) {
-    products = await getCollectionProducts({
+    const result = await getCollectionProducts({
       collection: searchParams.model,
       sortKey,
       reverse
     });
-  } else {
-    products = await getProducts({ sortKey, reverse, query: searchValue });
+    combinedResults.push(...result);
   }
+
+  if (Array.isArray(searchParams?.type)) {
+    const productTypePromises = getProductPromises(searchParams.type, 'type');
+    const results = await Promise.all(productTypePromises);
+    combinedResults.push(...results.flat());
+  } else if (searchParams?.type) {
+    const result = await getCollectionProducts({
+      collection: searchParams.type,
+      sortKey,
+      reverse
+    });
+    combinedResults.push(...result);
+  }
+
+  if (!searchParams?.model && !searchParams?.type) {
+    combinedResults = await getProducts({ sortKey, reverse, query: searchValue });
+  }
+
+  // Deduplicate products by ID
+  const uniqueProducts = Array.from(
+    new Map(combinedResults.map((product) => [product.id, product])).values()
+  );
+
+  products = uniqueProducts;
 
   const resultsText = products.length > 1 ? 'results' : 'result';
 
