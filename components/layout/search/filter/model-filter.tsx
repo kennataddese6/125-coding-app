@@ -99,15 +99,36 @@ export default function ModelFilter() {
         <label htmlFor="model">Ford</label>
       </div>
       <div className="my-2 flex items-center gap-3">
-        <input type="checkbox" id="model" />
+        <input
+          type="checkbox"
+          id="model"
+          checked={urlSearch.some((a) => a === 'mazda')}
+          onChange={(e) =>
+            e.target.checked ? createModelQuery('mazda') : deleteModelQuery('mazda')
+          }
+        />
         <label htmlFor="model">Mazda</label>
       </div>
       <div className="my-2 flex items-center gap-3">
-        <input type="checkbox" id="model" />
+        <input
+          type="checkbox"
+          id="model"
+          checked={urlSearch.some((a) => a === 'porshe')}
+          onChange={(e) =>
+            e.target.checked ? createModelQuery('porshe') : deleteModelQuery('porshe')
+          }
+        />
         <label htmlFor="model">Porshe</label>
       </div>
       <div className="my-2 flex items-center gap-3">
-        <input type="checkbox" id="model" />
+        <input
+          type="checkbox"
+          id="model"
+          checked={urlSearch.some((a) => a === 'land-rover')}
+          onChange={(e) =>
+            e.target.checked ? createModelQuery('land-rover') : deleteModelQuery('land-rover')
+          }
+        />
         <label htmlFor="model">Land Rover</label>
       </div>
     </>
