@@ -1,5 +1,11 @@
+'use client';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 export default function Hero() {
+  const router = useRouter();
+  const [model, setModel] = useState('');
+  const [type, setType] = useState();
   return (
     <div className="h-screen bg-blue-600 bg-[url('/hero-image.png')] bg-cover bg-fixed bg-no-repeat">
       <div className="flex h-screen w-full items-center justify-center bg-black/35">
@@ -9,20 +15,23 @@ export default function Hero() {
           </h1>
           <div className="mt-5 flex justify-center">
             <div className="mx-1 inline-flex w-screen justify-between overflow-hidden rounded-full border border-white bg-black/5 text-white backdrop:blur-sm lg:w-auto lg:bg-white lg:text-black">
-              <select className="max-w-26 w-28 bg-transparent px-1 py-3 lg:mx-2 lg:w-auto lg:bg-white lg:px-4">
+              <select
+                className="max-w-26 w-28 bg-transparent px-1 py-3 lg:mx-2 lg:w-auto lg:bg-white lg:px-4"
+                onChange={(e) => setModel(e.target.value)}
+              >
                 <option>Any Model</option>
-                <option>Audi</option>
-                <option>Volswagen</option>
-                <option>Seat</option>
-                <option>Skoda</option>
-                <option>Lamborghini</option>
-                <option>BMW</option>
-                <option>Mini</option>
-                <option>Mercedes</option>
-                <option>Ford</option>
-                <option>Mazda</option>
-                <option>Porshe</option>
-                <option>Land Rover</option>
+                <option value={'audi'}>Audi</option>
+                <option value={'volswagen'}>Volswagen</option>
+                <option value={'seat'}>Seat</option>
+                <option value={'skoda'}>Skoda</option>
+                <option value={'lamborghini'}>Lamborghini</option>
+                <option value={'bmw'}>BMW</option>
+                <option value={'mini'}>Mini</option>
+                <option value={'mercedes'}>Mercedes</option>
+                <option value={'ford'}>Ford</option>
+                <option value={'mazda'}>Mazda</option>
+                <option value={'porshe'}>Porshe</option>
+                <option value={'land-rover'}>Land Rover</option>
               </select>
               <select className="w-24 bg-transparent py-3 lg:mx-2 lg:w-28 lg:bg-white lg:px-4">
                 <option>Product</option>
@@ -43,10 +52,16 @@ export default function Hero() {
                 <option>300$</option>
                 <option>350$</option>
               </select>
-              <button className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 text-white lg:block">
+              <button
+                className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 text-white lg:block"
+                onClick={() => router.push(`/products${model ? `?model=${model}` : ''}`)}
+              >
                 <FaSearch className="inline" /> Search
               </button>
-              <button className="m-1 rounded-full bg-blue-600 p-3 lg:hidden">
+              <button
+                className="m-1 rounded-full bg-blue-600 p-3 lg:hidden"
+                onClick={() => router.push(`/products${model ? `?model=${model}` : ''}`)}
+              >
                 <FaSearch />
               </button>
             </div>
