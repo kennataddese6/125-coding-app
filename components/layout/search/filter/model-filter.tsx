@@ -6,7 +6,7 @@ export default function ModelFilter() {
   const searchParams = useSearchParams();
   const urlSearch = searchParams.getAll('model') || '';
   console.log(urlSearch, 'url search');
-  const { createModelQuery } = useChangeUrl();
+  const { createModelQuery, deleteModelQuery } = useChangeUrl();
   return (
     <>
       <div className="my-2 flex items-center gap-3">
@@ -14,7 +14,7 @@ export default function ModelFilter() {
           type="checkbox"
           id="model"
           checked={urlSearch.some((a) => a === 'audi')}
-          onChange={(e) => createModelQuery(e.target.checked ? 'audi' : '')}
+          onChange={(e) => (e.target.checked ? createModelQuery('audi') : deleteModelQuery('audi'))}
         />
         <label htmlFor="model">Audi</label>
       </div>
@@ -23,16 +23,30 @@ export default function ModelFilter() {
           type="checkbox"
           id="model"
           checked={urlSearch.some((a) => a === 'volswagen')}
-          onChange={(e) => createModelQuery(e.target.checked ? 'volswagen' : '')}
+          onChange={(e) =>
+            e.target.checked ? createModelQuery('volswagen') : deleteModelQuery('volswagen')
+          }
         />
         <label htmlFor="model">Volswagen</label>
       </div>
       <div className="my-2 flex items-center gap-3">
-        <input type="checkbox" id="model" />
+        <input
+          type="checkbox"
+          id="model"
+          checked={urlSearch.some((a) => a === 'seat')}
+          onChange={(e) => (e.target.checked ? createModelQuery('seat') : deleteModelQuery('seat'))}
+        />
         <label htmlFor="model">Seat</label>
       </div>
       <div className="my-2 flex items-center gap-3">
-        <input type="checkbox" id="model" />
+        <input
+          type="checkbox"
+          id="model"
+          checked={urlSearch.some((a) => a === 'skoda')}
+          onChange={(e) =>
+            e.target.checked ? createModelQuery('skoda') : deleteModelQuery('skoda')
+          }
+        />
         <label htmlFor="model">Skoda</label>
       </div>
       <div className="my-2 flex items-center gap-3">

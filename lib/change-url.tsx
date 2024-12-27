@@ -10,22 +10,25 @@ export default function useChangeUrl() {
     const params = new URLSearchParams(searchParams);
     const existingModels = params.getAll('model');
 
-    if (query) {
-      if (!existingModels.includes(query)) {
-        params.append('model', query);
-      } else {
-        const newModels = existingModels.filter((model) => model !== query);
-        params.delete('model');
-        newModels.forEach((model) => params.append('model', model));
-      }
-    } else {
-      params.delete('model');
+    if (query && !existingModels.includes(query)) {
+      params.append('model', query);
     }
 
     replace(`${pathname}?${params.toString()}`);
   };
 
+  const deleteModelQuery = (query: string) => {
+    const params = new URLSearchParams(searchParams);
+    const existingModels = params.getAll('model');
+    const newModels = existingModels.filter((model) => model !== query);
+    params.delete('model');
+    newModels.forEach((model) => params.append('model', model));
+
+    replace(`${pathname}?${params.toString()}`);
+  };
+
   return {
-    createModelQuery
+    createModelQuery,
+    deleteModelQuery
   };
 }
