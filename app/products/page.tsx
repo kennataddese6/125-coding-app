@@ -7,6 +7,7 @@ import {
 import Grid from 'components/grid';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
 import ProductGridItems from 'components/layout/product-grid-items';
+import ModelFilter from 'components/layout/search/filter/model-filter';
 import { defaultSort, sorting } from 'lib/constants';
 import { getCollectionProducts, getProducts } from 'lib/shopify';
 
@@ -49,54 +50,7 @@ export default async function Page(props: {
                 <AccordionItem value="item-1">
                   <AccordionTrigger>Make/Model</AccordionTrigger>
                   <AccordionContent>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Audi</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Volswagen</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Seat</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Skoda</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Lamborghini</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">BMW</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Mini</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Mercedes</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Ford</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Mazda</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Porshe</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Land Rover</label>
-                    </div>
+                    <ModelFilter />
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
