@@ -5,7 +5,7 @@ import { FaSearch } from 'react-icons/fa';
 export default function Hero() {
   const router = useRouter();
   const [model, setModel] = useState('');
-  const [type, setType] = useState();
+  const [type, setType] = useState('');
   return (
     <div className="h-screen bg-blue-600 bg-[url('/hero-image.png')] bg-cover bg-fixed bg-no-repeat">
       <div className="flex h-screen w-full items-center justify-center bg-black/35">
@@ -24,7 +24,7 @@ export default function Hero() {
                 <option value={'volswagen'}>Volswagen</option>
                 <option value={'seat'}>Seat</option>
                 <option value={'skoda'}>Skoda</option>
-                <option value={'lamborghini'}>Lamborghini</option>
+                <option value={'lambo'}>Lamborghini</option>
                 <option value={'bmw'}>BMW</option>
                 <option value={'mini'}>Mini</option>
                 <option value={'mercedes'}>Mercedes</option>
@@ -33,14 +33,16 @@ export default function Hero() {
                 <option value={'porshe'}>Porshe</option>
                 <option value={'land-rover'}>Land Rover</option>
               </select>
-              <select className="w-24 bg-transparent py-3 lg:mx-2 lg:w-28 lg:bg-white lg:px-4">
+              <select
+                className="w-24 bg-transparent py-3 lg:mx-2 lg:w-28 lg:bg-white lg:px-4"
+                onChange={(e) => setType(e.target.value)}
+              >
                 <option>Product</option>
-                <option>Apple Car Play</option>
-                <option>Android Auto</option>
-                <option>Reverse Cameras</option>
-                <option>Vechile Security</option>
-                <option>Dash Camera</option>
-                <option>Entertainment</option>
+                <option value={'apple-carplay'}>Apple Car Play</option>
+                <option value={'reverse-cameras'}>Reverse Cameras</option>
+                <option value={'vechile-security'}>Vechile Security</option>
+                <option value={'dash-camera'}>Dash Camera</option>
+                <option value={'entertainment'}>Entertainment</option>
               </select>
               <select className="bg-transparent py-3 lg:mx-2 lg:bg-white lg:px-4">
                 <option>Any Price</option>
@@ -54,13 +56,21 @@ export default function Hero() {
               </select>
               <button
                 className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 text-white lg:block"
-                onClick={() => router.push(`/products${model ? `?model=${model}` : ''}`)}
+                onClick={() =>
+                  router.push(
+                    `/products${model ? `?model=${model}` : ''}${type ? `&type=${type}` : ''}`
+                  )
+                }
               >
                 <FaSearch className="inline" /> Search
               </button>
               <button
                 className="m-1 rounded-full bg-blue-600 p-3 lg:hidden"
-                onClick={() => router.push(`/products${model ? `?model=${model}` : ''}`)}
+                onClick={() =>
+                  router.push(
+                    `/products${model ? `?model=${model}` : ''}${type ? `&type=${type}` : ''}`
+                  )
+                }
               >
                 <FaSearch />
               </button>
