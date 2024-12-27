@@ -16,6 +16,16 @@ export default function useChangeUrl() {
 
     replace(`${pathname}?${params.toString()}`);
   };
+  const createTypeQuery = (query: string) => {
+    const params = new URLSearchParams(searchParams);
+    const existingModels = params.getAll('type');
+
+    if (query && !existingModels.includes(query)) {
+      params.append('type', query);
+    }
+
+    replace(`${pathname}?${params.toString()}`);
+  };
 
   const deleteModelQuery = (query: string) => {
     const params = new URLSearchParams(searchParams);
@@ -26,9 +36,20 @@ export default function useChangeUrl() {
 
     replace(`${pathname}?${params.toString()}`);
   };
+  const deleteTypeQuery = (query: string) => {
+    const params = new URLSearchParams(searchParams);
+    const existingModels = params.getAll('type');
+    const newModels = existingModels.filter((model) => model !== query);
+    params.delete('type');
+    newModels.forEach((model) => params.append('type', model));
+
+    replace(`${pathname}?${params.toString()}`);
+  };
 
   return {
     createModelQuery,
-    deleteModelQuery
+    createTypeQuery,
+    deleteModelQuery,
+    deleteTypeQuery
   };
 }

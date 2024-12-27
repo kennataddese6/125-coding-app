@@ -11,8 +11,8 @@ import { useSearchParams } from 'next/navigation';
 export default function ProductFilter() {
   const searchParams = useSearchParams();
   const urlSearch = searchParams.getAll('model') || '';
-  console.log(urlSearch, 'url search');
-  const { createModelQuery, deleteModelQuery } = useChangeUrl();
+  const urlTypeSearch = searchParams.getAll('type') || '';
+  const { createModelQuery, createTypeQuery, deleteModelQuery, deleteTypeQuery } = useChangeUrl();
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
@@ -158,23 +158,68 @@ export default function ProductFilter() {
         <AccordionTrigger>Product type</AccordionTrigger>
         <AccordionContent>
           <div className="my-2 flex items-center gap-3">
-            <input type="checkbox" id="model" />
+            <input
+              type="checkbox"
+              id="model"
+              checked={urlTypeSearch.some((a) => a === 'apple-carplay')}
+              onChange={(e) =>
+                e.target.checked
+                  ? createTypeQuery('apple-carplay')
+                  : deleteTypeQuery('apple-carplay')
+              }
+            />
             <label htmlFor="model">Apple CarPlay</label>
           </div>
           <div className="my-2 flex items-center gap-3">
-            <input type="checkbox" id="model" />
+            <input
+              type="checkbox"
+              id="model"
+              checked={urlTypeSearch.some((a) => a === 'reverse-cameras')}
+              onChange={(e) =>
+                e.target.checked
+                  ? createTypeQuery('reverse-cameras')
+                  : deleteTypeQuery('reverse-cameras')
+              }
+            />
             <label htmlFor="model">Reverse Cameras</label>
           </div>
           <div className="my-2 flex items-center gap-3">
-            <input type="checkbox" id="model" />
+            <input
+              type="checkbox"
+              id="model"
+              checked={urlTypeSearch.some((a) => a === 'vehicle-security')}
+              onChange={(e) =>
+                e.target.checked
+                  ? createTypeQuery('vehicle-security')
+                  : deleteTypeQuery('vehicle-security')
+              }
+            />
             <label htmlFor="model">Vehicle Security</label>
           </div>
           <div className="my-2 flex items-center gap-3">
-            <input type="checkbox" id="model" />
+            <input
+              type="checkbox"
+              id="model"
+              checked={urlTypeSearch.some((a) => a === 'dash-security')}
+              onChange={(e) =>
+                e.target.checked
+                  ? createTypeQuery('dash-security')
+                  : deleteTypeQuery('dash-security')
+              }
+            />
             <label htmlFor="model">Dash Camera</label>
           </div>
           <div className="my-2 flex items-center gap-3">
-            <input type="checkbox" id="model" />
+            <input
+              type="checkbox"
+              id="model"
+              checked={urlTypeSearch.some((a) => a === 'entertainment')}
+              onChange={(e) =>
+                e.target.checked
+                  ? createTypeQuery('entertainment')
+                  : deleteTypeQuery('entertainment')
+              }
+            />
             <label htmlFor="model">Entertainment upgrades</label>
           </div>
         </AccordionContent>
