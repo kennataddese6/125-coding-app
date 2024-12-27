@@ -1,13 +1,7 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger
-} from '@/components/ui/accordion';
 import Grid from 'components/grid';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
 import ProductGridItems from 'components/layout/product-grid-items';
-import ModelFilter from 'components/layout/search/filter/model-filter';
+import ProductFilter from 'components/layout/search/filter/model-filter';
 import { defaultSort, sorting } from 'lib/constants';
 import { getCollectionProducts, getProducts } from 'lib/shopify';
 
@@ -58,64 +52,7 @@ export default async function Page(props: {
         {products.length > 0 ? (
           <div className="flex">
             <div className="hidden pr-8 lg:flex lg:w-1/4">
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>Make/Model</AccordionTrigger>
-                  <AccordionContent>
-                    <ModelFilter />
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-2">
-                  <AccordionTrigger>Product type</AccordionTrigger>
-                  <AccordionContent>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Apple CarPlay</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Reverse Cameras</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Vehicle Security</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Dash Camera</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Entertainment upgrades</label>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-3">
-                  <AccordionTrigger>Price</AccordionTrigger>
-                  <AccordionContent>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">Less than 100$</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">100$ up to 200$</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">200$ up to 300$</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">400$ up to 500$</label>
-                    </div>
-                    <div className="my-2 flex items-center gap-3">
-                      <input type="checkbox" id="model" />
-                      <label htmlFor="model">500$ up to 600$</label>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+              <ProductFilter />
             </div>
             <div className="w-full lg:w-3/4">
               <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
