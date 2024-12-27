@@ -50,7 +50,14 @@ export default function ModelFilter() {
         <label htmlFor="model">Skoda</label>
       </div>
       <div className="my-2 flex items-center gap-3">
-        <input type="checkbox" id="model" />
+        <input
+          type="checkbox"
+          id="model"
+          checked={urlSearch.some((a) => a === 'lambo')}
+          onChange={(e) =>
+            e.target.checked ? createModelQuery('lambo') : deleteModelQuery('lambo')
+          }
+        />
         <label htmlFor="model">Lamborghini</label>
       </div>
       <div className="my-2 flex items-center gap-3">
