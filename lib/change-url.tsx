@@ -26,6 +26,16 @@ export default function useChangeUrl() {
 
     replace(`${pathname}?${params.toString()}`);
   };
+  const createPriceQuery = (query: string) => {
+    const params = new URLSearchParams(searchParams);
+    const existingModels = params.getAll('price');
+
+    if (query && !existingModels.includes(query)) {
+      params.append('price', query);
+    }
+
+    replace(`${pathname}?${params.toString()}`);
+  };
 
   const deleteModelQuery = (query: string) => {
     const params = new URLSearchParams(searchParams);
@@ -45,11 +55,22 @@ export default function useChangeUrl() {
 
     replace(`${pathname}?${params.toString()}`);
   };
+  const deletePriceQuery = (query: string) => {
+    const params = new URLSearchParams(searchParams);
+    const existingModels = params.getAll('price');
+    const newModels = existingModels.filter((model) => model !== query);
+    params.delete('price');
+    newModels.forEach((model) => params.append('price', model));
+
+    replace(`${pathname}?${params.toString()}`);
+  };
 
   return {
     createModelQuery,
     createTypeQuery,
+    createPriceQuery,
     deleteModelQuery,
-    deleteTypeQuery
+    deleteTypeQuery,
+    deletePriceQuery
   };
 }
