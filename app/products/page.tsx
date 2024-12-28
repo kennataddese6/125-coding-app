@@ -14,7 +14,8 @@ export default async function Page(props: {
   const searchParams = await props.searchParams;
   const { sort, q: searchValue } = searchParams as { [key: string]: string };
   const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || defaultSort;
-  let products: any;
+  let products: any[] = [];
+
   const getProductPromises = (paramArray: string[], paramName: string) => {
     return paramArray.map(async (item) => {
       return await getCollectionProducts({
@@ -25,56 +26,64 @@ export default async function Page(props: {
     });
   };
 
-  let combinedResults: Product[] = [];
+  let modelResults: Product[] = [];
+  let typeResults: Product[] = [];
+  let priceResults: Product[] = [];
 
+  // Fetch products based on models
   if (Array.isArray(searchParams?.model)) {
     const productPromises = getProductPromises(searchParams.model, 'model');
     const results = await Promise.all(productPromises);
-    combinedResults.push(...results.flat());
+    modelResults = results.flat();
   } else if (searchParams?.model) {
-    const result = await getCollectionProducts({
+    modelResults = await getCollectionProducts({
       collection: searchParams.model,
       sortKey,
       reverse
     });
-    combinedResults.push(...result);
   }
 
+  // Fetch products based on types
   if (Array.isArray(searchParams?.type)) {
     const productTypePromises = getProductPromises(searchParams.type, 'type');
     const results = await Promise.all(productTypePromises);
-    combinedResults.push(...results.flat());
+    typeResults = results.flat();
   } else if (searchParams?.type) {
-    const result = await getCollectionProducts({
+    typeResults = await getCollectionProducts({
       collection: searchParams.type,
       sortKey,
       reverse
     });
-    combinedResults.push(...result);
   }
+
+  // Fetch products based on price
   if (Array.isArray(searchParams?.price)) {
-    const productTypePromises = getProductPromises(searchParams.price, 'price');
-    const results = await Promise.all(productTypePromises);
-    combinedResults.push(...results.flat());
+    const productPricePromises = getProductPromises(searchParams.price, 'price');
+    const results = await Promise.all(productPricePromises);
+    priceResults = results.flat();
   } else if (searchParams?.price) {
-    const result = await getCollectionProducts({
+    priceResults = await getCollectionProducts({
       collection: searchParams.price,
       sortKey,
       reverse
     });
-    combinedResults.push(...result);
   }
+
+  // If no specific filters are applied, fetch all products
   if (!searchParams?.model && !searchParams?.type && !searchParams?.price) {
-    combinedResults = await getProducts({ sortKey, reverse, query: searchValue });
+    products = await getProducts({ sortKey, reverse, query: searchValue });
+  } else {
+    // Combine results ensuring all conditions are met
+    const combinedResults = modelResults.concat(typeResults, priceResults);
+
+    products = combinedResults.filter(
+      (product, index, self) =>
+        self.findIndex((p) => p.id === product.id) === index &&
+        (modelResults.length === 0 || modelResults.some((m) => m.id === product.id)) &&
+        (typeResults.length === 0 || typeResults.some((t) => t.id === product.id)) &&
+        (priceResults.length === 0 || priceResults.some((p) => p.id === product.id))
+    );
   }
-
-  // Deduplicate products by ID
-  const uniqueProducts = Array.from(
-    new Map(combinedResults.map((product) => [product.id, product])).values()
-  );
-
-  products = uniqueProducts;
-
   const resultsText = products.length > 1 ? 'results' : 'result';
 
   return (
@@ -118,7 +127,16 @@ export default async function Page(props: {
               </Grid>
             </div>
           </div>
-        ) : null}
+        ) : (
+          <div className="flex">
+            <div className="hidden pr-8 lg:flex lg:w-1/4">
+              <ProductFilter />
+            </div>
+            <div className="w-full lg:w-3/4">
+              <h1 className="mx-5">No product found with the following criteria</h1>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
