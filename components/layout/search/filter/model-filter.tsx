@@ -12,7 +12,15 @@ export default function ProductFilter() {
   const searchParams = useSearchParams();
   const urlSearch = searchParams.getAll('model') || '';
   const urlTypeSearch = searchParams.getAll('type') || '';
-  const { createModelQuery, createTypeQuery, deleteModelQuery, deleteTypeQuery } = useChangeUrl();
+  const urlPriceSearch = searchParams.getAll('price') || '';
+  const {
+    createModelQuery,
+    createTypeQuery,
+    createPriceQuery,
+    deleteModelQuery,
+    deleteTypeQuery,
+    deletePriceQuery
+  } = useChangeUrl();
   return (
     <Accordion type="multiple" className="w-full">
       <AccordionItem value="item-1">
@@ -20,14 +28,7 @@ export default function ProductFilter() {
         <AccordionContent>
           <>
             <div className="my-2 flex items-center gap-3">
-              <input
-                type="checkbox"
-                id="model"
-                checked={urlSearch.some((a) => a === 'audi')}
-                onChange={(e) =>
-                  e.target.checked ? createModelQuery('audi') : deleteModelQuery('audi')
-                }
-              />
+              <input type="checkbox" id="model" checked={urlSearch.some((a) => a === 'audi')} />
               <label htmlFor="model">Audi</label>
             </div>
             <div className="my-2 flex items-center gap-3">
@@ -228,24 +229,59 @@ export default function ProductFilter() {
         <AccordionTrigger>Price</AccordionTrigger>
         <AccordionContent>
           <div className="my-2 flex items-center gap-3">
-            <input type="checkbox" id="model" />
+            <input
+              type="checkbox"
+              id="model"
+              checked={urlPriceSearch.some((a) => a === '0-100')}
+              onChange={(e) =>
+                e.target.checked ? createPriceQuery('0-100') : deletePriceQuery('0-100')
+              }
+            />
             <label htmlFor="model">Less than 100$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
-            <input type="checkbox" id="model" />
+            <input
+              type="checkbox"
+              id="model"
+              checked={urlPriceSearch.some((a) => a === '100-200')}
+              onChange={(e) =>
+                e.target.checked ? createPriceQuery('100-200') : deletePriceQuery('100-200')
+              }
+            />
             <label htmlFor="model">100$ up to 200$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
-            <input type="checkbox" id="model" />
+            <input
+              type="checkbox"
+              id="model"
+              checked={urlPriceSearch.some((a) => a === '200-300')}
+              onChange={(e) =>
+                e.target.checked ? createPriceQuery('200-300') : deletePriceQuery('200-300')
+              }
+            />
             <label htmlFor="model">200$ up to 300$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
-            <input type="checkbox" id="model" />
-            <label htmlFor="model">400$ up to 500$</label>
+            <input
+              type="checkbox"
+              id="model"
+              checked={urlPriceSearch.some((a) => a === '300-400')}
+              onChange={(e) =>
+                e.target.checked ? createPriceQuery('300-400') : deletePriceQuery('300-400')
+              }
+            />
+            <label htmlFor="model">300$ up to 400$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
-            <input type="checkbox" id="model" />
-            <label htmlFor="model">500$ up to 600$</label>
+            <input
+              type="checkbox"
+              id="model"
+              checked={urlPriceSearch.some((a) => a === '400-500')}
+              onChange={(e) =>
+                e.target.checked ? createPriceQuery('400-500') : deletePriceQuery('400-500')
+              }
+            />
+            <label htmlFor="model">400$ up to 500$</label>
           </div>
         </AccordionContent>
       </AccordionItem>
