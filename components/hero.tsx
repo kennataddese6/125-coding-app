@@ -6,6 +6,16 @@ export default function Hero() {
   const router = useRouter();
   const [model, setModel] = useState('');
   const [type, setType] = useState('');
+  const [price, setPrice] = useState('');
+
+  const buildUrl = (baseUrl: any, params: any) => {
+    const query = Object.keys(params)
+      .filter((key) => params[key])
+      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+      .join('&');
+    return `${baseUrl}${query ? `?${query}` : ''}`;
+  };
+
   return (
     <div className="h-screen bg-blue-600 bg-[url('/hero-image.png')] bg-cover bg-fixed bg-no-repeat">
       <div className="flex h-screen w-full items-center justify-center bg-black/35">
@@ -40,37 +50,30 @@ export default function Hero() {
                 <option>Product</option>
                 <option value={'apple-carplay'}>Apple Car Play</option>
                 <option value={'reverse-cameras'}>Reverse Cameras</option>
-                <option value={'vechile-security'}>Vechile Security</option>
+                <option value={'vehicle-security'}>Vechile Security</option>
                 <option value={'dash-camera'}>Dash Camera</option>
                 <option value={'entertainment'}>Entertainment</option>
               </select>
-              <select className="bg-transparent py-3 lg:mx-2 lg:bg-white lg:px-4">
+              <select
+                className="bg-transparent py-3 lg:mx-2 lg:bg-white lg:px-4"
+                onChange={(e) => setPrice(e.target.value)}
+              >
                 <option>Any Price</option>
-                <option> 50$</option>
-                <option>100$</option>
-                <option>150$</option>
-                <option>200$</option>
-                <option>250$</option>
-                <option>300$</option>
-                <option>350$</option>
+                <option value={'0-100'}>100$</option>
+                <option value={'100-200'}>200$</option>
+                <option value={'200-300'}>300$</option>
+                <option value={'300-400'}>400$</option>
+                <option value={'400-500'}>500$</option>
               </select>
               <button
                 className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 text-white lg:block"
-                onClick={() =>
-                  router.push(
-                    `/products${model ? `?model=${model}` : ''}${type ? `&type=${type}` : ''}`
-                  )
-                }
+                onClick={() => router.push(buildUrl('/products', { model, type, price }))}
               >
                 <FaSearch className="inline" /> Search
               </button>
               <button
                 className="m-1 rounded-full bg-blue-600 p-3 lg:hidden"
-                onClick={() =>
-                  router.push(
-                    `/products${model ? `?model=${model}` : ''}${type ? `&type=${type}` : ''}`
-                  )
-                }
+                onClick={() => router.push(buildUrl('/products', { model, type, price }))}
               >
                 <FaSearch />
               </button>
