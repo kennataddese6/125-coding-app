@@ -18,7 +18,7 @@ export default function NewFooter() {
         </div>
       </div>
       <div className="h-0.5 w-full bg-slate-500"></div>
-      <div className="mx-auto flex flex-wrap justify-between px-6 py-12 lg:w-3/4">
+      <div className="mx-auto flex flex-wrap justify-between px-6 py-12 lg:w-3/4 lg:px-0">
         <div>
           <h1 className="text-lg font-bold">Company</h1>
           <ul>
