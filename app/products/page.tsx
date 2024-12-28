@@ -1,10 +1,12 @@
 import Grid from 'components/grid';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
+import Search, { SearchSkeleton } from 'components/layout/navbar/search';
 import ProductGridItems from 'components/layout/product-grid-items';
 import ProductFilter from 'components/layout/search/filter/model-filter';
 import { defaultSort, sorting } from 'lib/constants';
 import { getCollectionProducts, getProducts } from 'lib/shopify';
 import { Product } from 'lib/shopify/types';
+import { Suspense } from 'react';
 
 export default async function Page(props: {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined } & { model: string }>;
@@ -80,6 +82,23 @@ export default async function Page(props: {
       <BlackNavbar />
       <div className="mx-2 text-black lg:px-32">
         <h1 className="my-4 py-5 text-3xl font-bold">Products</h1>
+        <div className="mb-4 flex justify-between py-5">
+          <div>
+            <label className="mr-3 font-bold">Sort by</label>
+            <select>
+              <option>Relevance</option>
+              <option>Trending</option>
+              <option>Latest arrivals</option>
+              <option>Price: Low to high</option>
+              <option>Price: High to low</option>
+            </select>
+          </div>
+          <div className="hidden justify-center md:flex md:w-1/3">
+            <Suspense fallback={<SearchSkeleton />}>
+              <Search />
+            </Suspense>
+          </div>
+        </div>
         {searchValue ? (
           <p className="mb-4">
             {products.length === 0

@@ -64,6 +64,11 @@ export default function useChangeUrl() {
 
     replace(`${pathname}?${params.toString()}`);
   };
+  const deleteSearchQuery = () => {
+    const params = new URLSearchParams(searchParams);
+    params.delete('q');
+    replace(`${pathname}?${params.toString()}`);
+  };
 
   return {
     createModelQuery,
@@ -71,6 +76,7 @@ export default function useChangeUrl() {
     createPriceQuery,
     deleteModelQuery,
     deleteTypeQuery,
-    deletePriceQuery
+    deletePriceQuery,
+    deleteSearchQuery
   };
 }
