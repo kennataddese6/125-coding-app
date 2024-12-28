@@ -50,8 +50,19 @@ export default async function Page(props: {
     });
     combinedResults.push(...result);
   }
-
-  if (!searchParams?.model && !searchParams?.type) {
+  if (Array.isArray(searchParams?.price)) {
+    const productTypePromises = getProductPromises(searchParams.price, 'price');
+    const results = await Promise.all(productTypePromises);
+    combinedResults.push(...results.flat());
+  } else if (searchParams?.price) {
+    const result = await getCollectionProducts({
+      collection: searchParams.price,
+      sortKey,
+      reverse
+    });
+    combinedResults.push(...result);
+  }
+  if (!searchParams?.model && !searchParams?.type && !searchParams?.price) {
     combinedResults = await getProducts({ sortKey, reverse, query: searchValue });
   }
 

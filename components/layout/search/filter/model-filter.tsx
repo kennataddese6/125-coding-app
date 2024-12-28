@@ -28,7 +28,14 @@ export default function ProductFilter() {
         <AccordionContent>
           <>
             <div className="my-2 flex items-center gap-3">
-              <input type="checkbox" id="model" checked={urlSearch.some((a) => a === 'audi')} />
+              <input
+                type="checkbox"
+                id="model"
+                checked={urlSearch.some((a) => a === 'audi')}
+                onChange={(e) =>
+                  e.target.checked ? createModelQuery('audi') : deleteModelQuery('audi')
+                }
+              />
               <label htmlFor="model">Audi</label>
             </div>
             <div className="my-2 flex items-center gap-3">
