@@ -194,7 +194,7 @@ export default function ProductFilter() {
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="model"
+              id="vehicle-security"
               checked={urlTypeSearch.some((a) => a === 'vehicle-security')}
               onChange={(e) =>
                 e.target.checked
@@ -202,7 +202,7 @@ export default function ProductFilter() {
                   : deleteTypeQuery('vehicle-security')
               }
             />
-            <label htmlFor="model">Vehicle Security</label>
+            <label htmlFor="vehicle-security">Vehicle Security</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
