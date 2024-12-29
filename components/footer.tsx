@@ -8,11 +8,11 @@ export default function NewFooter() {
           <h1 className="text-2xl">Join 125CODING</h1>
           <p className="mt-2 text-sm">Receive pricing updates, shopping tips & more!</p>
         </div>
-        <div className="inline-flex overflow-hidden rounded-3.5xl bg-white/10 p-2">
+        <div className="mx-3 mt-3 inline-flex overflow-hidden rounded-3.5xl bg-white/10 p-2 lg:mt-0">
           <input
             type="text"
             placeholder="Your email address"
-            className="mx-4 min-w-64 border-none bg-transparent pr-5 text-white focus:border-none focus:outline-none"
+            className="mx-4 border-none bg-transparent pr-5 text-white focus:border-none focus:outline-none lg:min-w-64"
           />
           <button className="rounded-full bg-blue-600 px-6 py-2">Sign Up</button>
         </div>
