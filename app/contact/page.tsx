@@ -28,7 +28,7 @@ export default function Page() {
               <span className="customplaceholder">Email</span>
             </label>
             <textarea
-              className="mt-5 w-full border border-slate-400 p-3 focus:outline-blue-500"
+              className="mt-5 h-32 w-full border border-slate-400 p-3 focus:outline-blue-500"
               placeholder="Message"
             ></textarea>
             <button className="mt-4 w-full bg-blue-500 p-2 text-white">Send</button>
@@ -52,6 +52,15 @@ export default function Page() {
               <FaInstagram className="mr-3 inline cursor-pointer" fontSize={22} color="orange" />
               <FaTwitter className="mr-3 inline cursor-pointer" fontSize={22} color="dodgerblue" />
             </div>
+            <iframe
+              className="mt-3 w-full rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13212.240487806208!2d-118.2320194751238!3d34.11921052543224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c1bc27d9d281%3A0x3e8918e0a4d56540!2sBub%20and%20Grandma&#39;s%20Restaurant!5e0!3m2!1sen!2set!4v1735491952551!5m2!1sen!2set"
+              width="300"
+              height="150"
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
