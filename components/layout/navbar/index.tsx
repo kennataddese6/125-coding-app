@@ -29,7 +29,14 @@ export function Navbar() {
     >
       <div className="block flex-none md:hidden">
         <Suspense fallback={null}>
-          <MobileMenu menu={[]} />
+          <MobileMenu
+            menu={[
+              { title: 'Home', path: '/' },
+              { title: 'Products', path: '/products' },
+              { title: 'About', path: '/about' },
+              { title: 'Contact', path: '/contact' }
+            ]}
+          />
         </Suspense>
       </div>
       <div className="flex w-full items-center justify-between">
