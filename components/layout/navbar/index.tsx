@@ -75,7 +75,9 @@ export function Navbar() {
             <li className="mx-5 cursor-pointer p-1">
               <Link href={'/products'}>Products</Link>
             </li>
-            <li className="mx-5 cursor-pointer p-1">About</li>
+            <li className="mx-5 cursor-pointer p-1">
+              <Link href={'/about'}>About</Link>
+            </li>
             <li className="mx-5 cursor-pointer p-1">
               <Link href={'/contact'}>Contact</Link>
             </li>
