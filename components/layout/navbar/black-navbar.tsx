@@ -62,7 +62,11 @@ export function BlackNavbar() {
             >
               <Link href={'/products'}>Products</Link>
             </li>
-            <li className="mx-5 cursor-pointer p-1">About</li>
+            <li
+              className={`mx-5 cursor-pointer p-1 ${pathname.includes('about') ? 'font-bold text-blue-600' : ''}`}
+            >
+              About
+            </li>
             <li
               className={`mx-5 cursor-pointer p-1 ${pathname === '/contact' ? 'font-bold text-blue-600' : ''}`}
             >
