@@ -1,3 +1,4 @@
+import NewFooter from 'components/footer';
 import Grid from 'components/grid';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
 import Search, { SearchSkeleton } from 'components/layout/navbar/search';
@@ -138,6 +139,7 @@ export default async function Page(props: {
           </div>
         )}
       </div>
+      <NewFooter />
     </>
   );
 }
