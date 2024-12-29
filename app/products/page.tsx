@@ -126,7 +126,9 @@ export default async function Page(props: {
               <ProductFilter />
             </div>
             <div className="w-full lg:w-3/4">
-              <h1 className="mx-5">No product found with the following criteria</h1>
+              <h1 className="mx-5 my-4 text-center lg:my-0 lg:text-start">
+                No product found with the following criteria
+              </h1>
             </div>
           </div>
         )}
