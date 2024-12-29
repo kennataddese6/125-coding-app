@@ -4,7 +4,7 @@ export default function NewFooter() {
   return (
     <footer className="footer-color">
       <div className="mx-auto flex flex-wrap items-center justify-between py-10 lg:w-3/4">
-        <div className="ml-5">
+        <div className="ml-5 lg:ml-0">
           <h1 className="text-2xl">Join 125CODING</h1>
           <p className="mt-2 text-sm">Receive pricing updates, shopping tips & more!</p>
         </div>
