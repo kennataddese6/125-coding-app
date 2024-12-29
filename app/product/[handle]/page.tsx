@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import NewFooter from 'components/footer';
 import { GridTileImage } from 'components/grid/tile';
-import Footer from 'components/layout/footer';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
 import { Gallery } from 'components/product/gallery';
 import { ProductProvider } from 'components/product/product-context';
@@ -84,7 +84,7 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
           }}
         />
         <div className="mx-auto max-w-screen-2xl px-4 text-black">
-          <div className="flex flex-col rounded-lg border border-neutral-200 bg-white p-8 md:p-12 lg:flex-row lg:gap-8 dark:border-neutral-800 dark:bg-black">
+          <div className="flex flex-col rounded-lg border border-neutral-200 bg-white p-8 dark:border-neutral-800 dark:bg-black md:p-12 lg:flex-row lg:gap-8">
             <div className="h-full w-full basis-full lg:basis-4/6">
               <Suspense
                 fallback={
@@ -108,7 +108,7 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
           </div>
           <RelatedProducts id={product.id} />
         </div>
-        <Footer />
+        <NewFooter />
       </ProductProvider>
     </>
   );
