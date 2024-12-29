@@ -6,7 +6,7 @@ export default function SortDropDown() {
   const { createSortQuery, deleteSortQuery } = useChangeUrl();
   return (
     <>
-      <div className="rounded-3xl border border-stone-400 px-4 py-2 font-bold lg:hidden">
+      <div className="ml-12 rounded-3xl border border-stone-400 px-4 py-2 font-bold lg:hidden">
         Filter and sort <CiFilter className="inline" color="black" />
       </div>
       <div className="hidden lg:block">

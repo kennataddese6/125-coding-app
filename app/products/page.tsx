@@ -92,8 +92,8 @@ export default async function Page(props: {
     <>
       <BlackNavbar />
       <div className="mx-2 text-black lg:px-32">
-        <h1 className="my-4 py-5 text-3xl font-bold">Products</h1>
-        <div className="mb-4 flex justify-between py-5">
+        <h1 className="inline text-3xl font-bold lg:my-4 lg:block lg:py-5">Products</h1>
+        <div className="mb-4 inline-flex justify-between py-5 lg:flex">
           <SortDropDown />
           <div className="hidden justify-center md:flex md:w-1/3">
             <Suspense fallback={<SearchSkeleton />}>
