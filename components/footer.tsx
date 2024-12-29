@@ -31,10 +31,10 @@ export default function NewFooter() {
         <div className="w-full lg:w-auto">
           <h1 className="text-lg font-bold">Our Brands</h1>
           <ul>
-            <li className="py-2">About us</li>
-            <li className="py-2">Contact us</li>
-            <li className="py-2">FAQ</li>
-            <li className="py-2">Terms & conditions</li>
+            <li className="py-2">Apple CarPlay</li>
+            <li className="py-2">Dash Cameras</li>
+            <li className="py-2">Reverse Cameras</li>
+            <li className="py-2">Vehicle Security</li>
           </ul>
         </div>
         <div className="w-full lg:w-auto">
