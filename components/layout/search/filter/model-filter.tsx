@@ -30,134 +30,134 @@ export default function ProductFilter() {
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="audi"
                 checked={urlSearch.some((a) => a === 'audi')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('audi') : deleteModelQuery('audi')
                 }
               />
-              <label htmlFor="model">Audi</label>
+              <label htmlFor="audi">Audi</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="volswagen"
                 checked={urlSearch.some((a) => a === 'volswagen')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('volswagen') : deleteModelQuery('volswagen')
                 }
               />
-              <label htmlFor="model">Volswagen</label>
+              <label htmlFor="volswagen">Volswagen</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="seat"
                 checked={urlSearch.some((a) => a === 'seat')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('seat') : deleteModelQuery('seat')
                 }
               />
-              <label htmlFor="model">Seat</label>
+              <label htmlFor="seat">Seat</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="skoda"
                 checked={urlSearch.some((a) => a === 'skoda')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('skoda') : deleteModelQuery('skoda')
                 }
               />
-              <label htmlFor="model">Skoda</label>
+              <label htmlFor="skoda">Skoda</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="lambo"
                 checked={urlSearch.some((a) => a === 'lambo')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('lambo') : deleteModelQuery('lambo')
                 }
               />
-              <label htmlFor="model">Lamborghini</label>
+              <label htmlFor="lambo">Lamborghini</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="bmw"
                 checked={urlSearch.some((a) => a === 'bmw')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('bmw') : deleteModelQuery('bmw')
                 }
               />
-              <label htmlFor="model">BMW</label>
+              <label htmlFor="bmw">BMW</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="mini"
                 checked={urlSearch.some((a) => a === 'mini')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('mini') : deleteModelQuery('mini')
                 }
               />
-              <label htmlFor="model">Mini</label>
+              <label htmlFor="mini">Mini</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="mercedes"
                 checked={urlSearch.some((a) => a === 'mercedes')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('mercedes') : deleteModelQuery('mercedes')
                 }
               />
-              <label htmlFor="model">Mercedes</label>
+              <label htmlFor="mercedes">Mercedes</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="ford"
                 checked={urlSearch.some((a) => a === 'ford')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('ford') : deleteModelQuery('ford')
                 }
               />
-              <label htmlFor="model">Ford</label>
+              <label htmlFor="ford">Ford</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="mazda"
                 checked={urlSearch.some((a) => a === 'mazda')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('mazda') : deleteModelQuery('mazda')
                 }
               />
-              <label htmlFor="model">Mazda</label>
+              <label htmlFor="mazda">Mazda</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="porshe"
                 checked={urlSearch.some((a) => a === 'porshe')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('porshe') : deleteModelQuery('porshe')
                 }
               />
-              <label htmlFor="model">Porshe</label>
+              <label htmlFor="porshe">Porshe</label>
             </div>
             <div className="my-2 flex items-center gap-3">
               <input
                 type="checkbox"
-                id="model"
+                id="land-rover"
                 checked={urlSearch.some((a) => a === 'land-rover')}
                 onChange={(e) =>
                   e.target.checked ? createModelQuery('land-rover') : deleteModelQuery('land-rover')
                 }
               />
-              <label htmlFor="model">Land Rover</label>
+              <label htmlFor="land-rover">Land Rover</label>
             </div>
           </>
         </AccordionContent>
@@ -238,57 +238,57 @@ export default function ProductFilter() {
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="model"
+              id="0-100"
               checked={urlPriceSearch.some((a) => a === '0-100')}
               onChange={(e) =>
                 e.target.checked ? createPriceQuery('0-100') : deletePriceQuery('0-100')
               }
             />
-            <label htmlFor="model">Less than 100$</label>
+            <label htmlFor="0-100">Less than 100$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="model"
+              id="100-200"
               checked={urlPriceSearch.some((a) => a === '100-200')}
               onChange={(e) =>
                 e.target.checked ? createPriceQuery('100-200') : deletePriceQuery('100-200')
               }
             />
-            <label htmlFor="model">100$ up to 200$</label>
+            <label htmlFor="100-200">100$ up to 200$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="model"
+              id="200-300"
               checked={urlPriceSearch.some((a) => a === '200-300')}
               onChange={(e) =>
                 e.target.checked ? createPriceQuery('200-300') : deletePriceQuery('200-300')
               }
             />
-            <label htmlFor="model">200$ up to 300$</label>
+            <label htmlFor="200-300">200$ up to 300$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="model"
+              id="300-400"
               checked={urlPriceSearch.some((a) => a === '300-400')}
               onChange={(e) =>
                 e.target.checked ? createPriceQuery('300-400') : deletePriceQuery('300-400')
               }
             />
-            <label htmlFor="model">300$ up to 400$</label>
+            <label htmlFor="300-400">300$ up to 400$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="model"
+              id="400-500"
               checked={urlPriceSearch.some((a) => a === '400-500')}
               onChange={(e) =>
                 e.target.checked ? createPriceQuery('400-500') : deletePriceQuery('400-500')
               }
             />
-            <label htmlFor="model">400$ up to 500$</label>
+            <label htmlFor="400-500">400$ up to 500$</label>
           </div>
         </AccordionContent>
       </AccordionItem>
