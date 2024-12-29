@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import './styles.css';
 export default function BrandWorks() {
   return (
-    <div className="lg:rounded-3.5xl -mt-16 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:-mt-20">
+    <div className="-mt-16 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:-mt-20 lg:rounded-3.5xl">
       <div className="mx-auto mt-4 p-4 lg:w-4/5">
         <h2 className="text-center text-2xl font-bold lg:text-start">Brands we have worked on</h2>
       </div>
@@ -67,7 +67,7 @@ export default function BrandWorks() {
               Volswagen
             </div>
           </SwiperSlide>
-          <SwiperSlide className="text-black">
+          {/* <SwiperSlide className="text-black">
             <div className="h-16 w-16 p-2">
               <Image
                 width={50}
@@ -78,7 +78,7 @@ export default function BrandWorks() {
               />
               Lamborghini
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide className="text-black">
             <div className="h-16 w-16 p-2">
               <Image width={50} height={50} alt="audi" src={'/audi.png'} className="object-cover" />
@@ -115,7 +115,7 @@ export default function BrandWorks() {
               Volswagen
             </div>
           </SwiperSlide>
-          <SwiperSlide className="text-black">
+          {/* <SwiperSlide className="text-black">
             <div className="h-16 w-16 p-2">
               <Image
                 width={50}
@@ -126,7 +126,7 @@ export default function BrandWorks() {
               />
               Lamborghini
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide className="text-black">
             <div className="h-16 w-16 p-2">
               <Image width={50} height={50} alt="audi" src={'/audi.png'} className="object-cover" />
@@ -163,7 +163,7 @@ export default function BrandWorks() {
               Volswagen
             </div>
           </SwiperSlide>
-          <SwiperSlide className="text-black">
+          {/* <SwiperSlide className="text-black">
             <div className="h-16 w-16 p-2">
               <Image
                 width={50}
@@ -174,7 +174,7 @@ export default function BrandWorks() {
               />
               Lamborghini
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide className="text-black">
             <div className="h-16 w-16 p-2">
               <Image width={50} height={50} alt="audi" src={'/audi.png'} className="object-cover" />
@@ -211,7 +211,7 @@ export default function BrandWorks() {
               Volswagen
             </div>
           </SwiperSlide>
-          <SwiperSlide className="text-black">
+          {/* <SwiperSlide className="text-black">
             <div className="h-16 w-16 p-2">
               <Image
                 width={50}
@@ -222,7 +222,7 @@ export default function BrandWorks() {
               />
               Lamborghini
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide className="text-black">
             <div className="h-16 w-16 p-2">
               <Image width={50} height={50} alt="audi" src={'/audi.png'} className="object-cover" />
@@ -259,7 +259,7 @@ export default function BrandWorks() {
               Volswagen
             </div>
           </SwiperSlide>
-          <SwiperSlide className="text-black">
+          {/* <SwiperSlide className="text-black">
             <div className="h-16 w-16 p-2">
               <Image
                 width={50}
@@ -270,7 +270,7 @@ export default function BrandWorks() {
               />
               Lamborghini
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
       <br />
