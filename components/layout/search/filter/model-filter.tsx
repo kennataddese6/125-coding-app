@@ -168,7 +168,7 @@ export default function ProductFilter() {
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="model"
+              id="apple-carplay"
               checked={urlTypeSearch.some((a) => a === 'apple-carplay')}
               onChange={(e) =>
                 e.target.checked
@@ -176,12 +176,12 @@ export default function ProductFilter() {
                   : deleteTypeQuery('apple-carplay')
               }
             />
-            <label htmlFor="model">Apple CarPlay</label>
+            <label htmlFor="apple-carplay">Apple CarPlay</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="model"
+              id="reverse-cameras"
               checked={urlTypeSearch.some((a) => a === 'reverse-cameras')}
               onChange={(e) =>
                 e.target.checked
@@ -189,7 +189,7 @@ export default function ProductFilter() {
                   : deleteTypeQuery('reverse-cameras')
               }
             />
-            <label htmlFor="model">Reverse Cameras</label>
+            <label htmlFor="reverse-cameras">Reverse Cameras</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
@@ -207,7 +207,7 @@ export default function ProductFilter() {
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="model"
+              id="dash-security"
               checked={urlTypeSearch.some((a) => a === 'dash-security')}
               onChange={(e) =>
                 e.target.checked
@@ -215,12 +215,12 @@ export default function ProductFilter() {
                   : deleteTypeQuery('dash-security')
               }
             />
-            <label htmlFor="model">Dash Camera</label>
+            <label htmlFor="dash-security">Dash Camera</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="model"
+              id="entertainment"
               checked={urlTypeSearch.some((a) => a === 'entertainment')}
               onChange={(e) =>
                 e.target.checked
@@ -228,7 +228,7 @@ export default function ProductFilter() {
                   : deleteTypeQuery('entertainment')
               }
             />
-            <label htmlFor="model">Entertainment upgrades</label>
+            <label htmlFor="entertainment">Entertainment upgrades</label>
           </div>
         </AccordionContent>
       </AccordionItem>
