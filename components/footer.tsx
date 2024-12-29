@@ -4,7 +4,7 @@ export default function NewFooter() {
   return (
     <footer className="footer-color">
       <div className="mx-auto flex flex-wrap items-center justify-between py-10 lg:w-3/4">
-        <div>
+        <div className="ml-5">
           <h1 className="text-2xl">Join 125CODING</h1>
           <p className="mt-2 text-sm">Receive pricing updates, shopping tips & more!</p>
         </div>
@@ -18,8 +18,8 @@ export default function NewFooter() {
         </div>
       </div>
       <div className="h-0.5 w-full bg-slate-500"></div>
-      <div className="mx-auto flex flex-wrap justify-between px-6 py-12 lg:w-3/4 lg:px-0">
-        <div>
+      <div className="mx-auto flex flex-wrap justify-between gap-4 px-6 py-12 lg:w-3/4 lg:px-0">
+        <div className="w-full lg:w-auto">
           <h1 className="text-lg font-bold">Company</h1>
           <ul>
             <li className="py-2">About us</li>
@@ -28,7 +28,7 @@ export default function NewFooter() {
             <li className="py-2">Terms & conditions</li>
           </ul>
         </div>
-        <div>
+        <div className="w-full lg:w-auto">
           <h1 className="text-lg font-bold">Our Brands</h1>
           <ul>
             <li className="py-2">About us</li>
@@ -37,7 +37,7 @@ export default function NewFooter() {
             <li className="py-2">Terms & conditions</li>
           </ul>
         </div>
-        <div>
+        <div className="w-full lg:w-auto">
           <h1 className="text-lg font-bold">Vehicle Type</h1>
           <ul>
             <li className="py-2">Ford</li>
@@ -46,7 +46,7 @@ export default function NewFooter() {
             <li className="py-2">Land Rover</li>
           </ul>
         </div>
-        <div>
+        <div className="w-full lg:w-auto">
           <h1 className="text-lg font-bold">Follow Us</h1>
           <ul>
             <li className="py-3">
