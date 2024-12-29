@@ -26,6 +26,16 @@ export default function useChangeUrl() {
 
     replace(`${pathname}?${params.toString()}`);
   };
+  const createSortQuery = (query: string) => {
+    const params = new URLSearchParams(searchParams);
+    params.set('sort', query);
+    replace(`${pathname}?${params.toString()}`);
+  };
+  const deleteSortQuery = (query: string) => {
+    const params = new URLSearchParams(searchParams);
+    params.delete('sort');
+    replace(`${pathname}?${params.toString()}`);
+  };
   const createPriceQuery = (query: string) => {
     const params = new URLSearchParams(searchParams);
     const existingModels = params.getAll('price');
@@ -77,6 +87,8 @@ export default function useChangeUrl() {
     deleteModelQuery,
     deleteTypeQuery,
     deletePriceQuery,
+    createSortQuery,
+    deleteSortQuery,
     deleteSearchQuery
   };
 }
