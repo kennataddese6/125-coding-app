@@ -15,7 +15,13 @@ export default function Page() {
       <BlackNavbar />
       <div className="mx-auto rounded-xl border border-slate-300 bg-white px-5 py-8 text-black shadow-md lg:my-5 lg:w-3/4">
         <h1 className="text-center text-2xl text-blue-500">Get in Touch</h1>
-        <div className="mx-auto mt-1 h-0.5 w-32 bg-blue-500"></div>
+        <div className="relative mx-auto mt-1 h-0.5 w-32 bg-blue-500"></div>
+        <div className="absolute top-1/3">
+          <FaYoutube className="mx-4 my-8 cursor-pointer" fontSize={26} color="red" />
+          <FaFacebook className="mx-4 my-8 cursor-pointer" fontSize={22} color="blue" />
+          <FaInstagram className="mx-4 my-8 cursor-pointer" fontSize={22} color="orange" />
+          <FaTwitter className="mx-4 my-8 cursor-pointer" fontSize={22} color="dodgerblue" />
+        </div>
         <div className="mx-12 mt-5 flex flex-wrap justify-between p-5">
           <div className="w-full px-4 lg:w-1/2">
             <h1 className="text-xl">Leave us a Message</h1>
@@ -46,17 +52,17 @@ export default function Page() {
               <IoIosMail color="grey" className="mr-2 inline" fontSize={22} />
               hello@info.com.org
             </div>
-            <div className="p-2">
+            {/*          <div className="p-2">
               <FaYoutube className="mr-3 inline cursor-pointer" fontSize={26} color="red" />
               <FaFacebook className="mr-3 inline cursor-pointer" fontSize={22} color="blue" />
               <FaInstagram className="mr-3 inline cursor-pointer" fontSize={22} color="orange" />
               <FaTwitter className="mr-3 inline cursor-pointer" fontSize={22} color="dodgerblue" />
-            </div>
+            </div> */}
             <iframe
               className="mt-3 w-full rounded-lg"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13212.240487806208!2d-118.2320194751238!3d34.11921052543224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c1bc27d9d281%3A0x3e8918e0a4d56540!2sBub%20and%20Grandma&#39;s%20Restaurant!5e0!3m2!1sen!2set!4v1735491952551!5m2!1sen!2set"
               width="300"
-              height="150"
+              height="200"
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
