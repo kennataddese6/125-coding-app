@@ -1,20 +1,22 @@
+'use client';
 import CartModal from 'components/cart/modal';
-import { getMenu } from 'lib/shopify';
 import { Menu } from 'lib/shopify/types';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Suspense } from 'react';
 import MobileMenu from './mobile-menu';
 
 const { SITE_NAME } = process.env;
 
-export async function BlackNavbar() {
-  const menu = await getMenu('next-js-frontend-header-menu');
-
+export function BlackNavbar() {
+  // const menu = await getMenu('next-js-frontend-header-menu');
+  const menu = [];
+  const pathname = usePathname();
   return (
     <nav className="sticky top-0 z-10 flex w-full items-center justify-between bg-white p-4 text-black lg:px-32">
       <div className="block flex-none md:hidden">
         <Suspense fallback={null}>
-          <MobileMenu menu={menu} />
+          <MobileMenu menu={[]} />
         </Suspense>
       </div>
       <div className="flex w-full items-center justify-between">
@@ -26,12 +28,12 @@ export async function BlackNavbar() {
           >
             {/* <LogoSquare /> */}
             <div className="ml-2 flex-none text-sm font-medium uppercase md:hidden lg:block">
-              {SITE_NAME}
+              125CODING
             </div>
           </Link>
           {menu.length ? (
             <ul className="hidden gap-6 text-sm md:flex md:items-center">
-              {menu.map((item: Menu) => (
+              {[].map((item: Menu) => (
                 <li key={item.title}>
                   <Link
                     href={item.path}
@@ -52,12 +54,20 @@ export async function BlackNavbar() {
         </div> */}
         <div className="hidden items-center justify-end md:flex">
           <ul className="flex">
-            <li className="mx-5 cursor-pointer p-1">Home</li>
-            <li className="mx-5 cursor-pointer rounded-md border-b-2 border-b-blue-600 p-1">
-              Products
+            <li className="mx-5 cursor-pointer p-1">
+              <Link href={'/'}>Home</Link>
+            </li>
+            <li
+              className={`mx-5 cursor-pointer p-1 ${pathname.includes('product') ? 'font-bold text-blue-600' : ''}`}
+            >
+              <Link href={'/products'}>Products</Link>
             </li>
             <li className="mx-5 cursor-pointer p-1">About</li>
-            <li className="mx-5 cursor-pointer p-1">Contact</li>
+            <li
+              className={`mx-5 cursor-pointer p-1 ${pathname === '/contact' ? 'font-bold text-blue-600' : ''}`}
+            >
+              <Link href={'/contact'}>Contact</Link>
+            </li>
           </ul>
           <CartModal color="text-black" />
         </div>

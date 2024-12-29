@@ -68,7 +68,7 @@ export function Navbar() {
         <div className="hidden items-center justify-end md:flex">
           <ul className="flex">
             <li
-              className={`mx-5 cursor-pointer rounded-md border-b-2 p-1 ${showNav ? 'border-b-transparent text-blue-600' : 'border-b-white'}`}
+              className={`mx-5 cursor-pointer rounded-md border-b-2 p-1 ${showNav ? 'border-b-transparent font-bold text-blue-600' : 'border-b-white'}`}
             >
               Home
             </li>
@@ -76,7 +76,9 @@ export function Navbar() {
               <Link href={'/products'}>Products</Link>
             </li>
             <li className="mx-5 cursor-pointer p-1">About</li>
-            <li className="mx-5 cursor-pointer p-1">Contact</li>
+            <li className="mx-5 cursor-pointer p-1">
+              <Link href={'/contact'}>Contact</Link>
+            </li>
           </ul>
           <CartModal color={`${showNav ? 'text-black' : 'text-white'}`} />
         </div>
