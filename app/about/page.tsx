@@ -1,6 +1,5 @@
 import NewFooter from 'components/footer';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
-import Image from 'next/image';
 
 export default function Page() {
   return (
@@ -19,9 +18,9 @@ export default function Page() {
             Read More
           </button>
         </div>
-        <div>
+        {/*     <div>
           <Image src={'/team.png'} width={500} height={600} alt="team image" />
-        </div>
+        </div> */}
       </div>
       <NewFooter />
     </>
