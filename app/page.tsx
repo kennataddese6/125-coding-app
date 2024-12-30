@@ -1,3 +1,4 @@
+import Benefits from 'components/benefits';
 import BrandWorks from 'components/brand-works';
 import FeedBack from 'components/feedbacks';
 import NewFooter from 'components/footer';
@@ -20,6 +21,7 @@ export default function HomePage() {
       <br />
       <BrandWorks />
       <HomeProducts />
+      <Benefits />
       <FeedBack />
       <NewFooter />
       {/*       <ThreeItemGrid />
