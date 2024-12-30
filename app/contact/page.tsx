@@ -1,11 +1,13 @@
 import NewFooter from 'components/footer';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
+import Link from 'next/link';
 import {
   FaFacebook,
   FaInstagram,
   FaMapMarkerAlt,
   FaPhone,
   FaTwitter,
+  FaWhatsapp,
   FaYoutube
 } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
@@ -17,10 +19,22 @@ export default function Page() {
         <h1 className="text-center text-2xl text-blue-500">Get in Touch</h1>
         <div className="relative mx-auto mt-1 h-0.5 w-32 bg-blue-500"></div>
         <div className="absolute top-1/3 hidden lg:block">
-          <FaYoutube className="mx-4 my-8 cursor-pointer" fontSize={26} color="red" />
-          <FaFacebook className="mx-4 my-8 cursor-pointer" fontSize={22} color="blue" />
-          <FaInstagram className="mx-4 my-8 cursor-pointer" fontSize={22} color="orange" />
-          <FaTwitter className="mx-4 my-8 cursor-pointer" fontSize={22} color="dodgerblue" />
+          <Link href={'https://www.youtube.com/channel/UCfWZU2kY-CN21Ycc0aX4L9Q'}>
+            <FaYoutube className="mx-4 my-8 cursor-pointer" fontSize={26} color="red" />
+          </Link>
+          <Link href={'https://web.facebook.com/125coding/'}>
+            <FaFacebook className="mx-4 my-8 cursor-pointer" fontSize={22} color="blue" />
+          </Link>
+          <Link href={'https://www.instagram.com/125coding/'}>
+            <FaInstagram className="mx-4 my-8 cursor-pointer" fontSize={22} color="orange" />
+          </Link>
+          <Link
+            href={
+              'https://api.whatsapp.com/send/?phone=447791179663&text&type=phone_number&app_absent=0'
+            }
+          >
+            <FaWhatsapp className="mx-4 my-8 cursor-pointer" fontSize={22} color="green" />
+          </Link>
         </div>
         <div className="mx-12 mt-5 flex flex-wrap justify-between lg:p-5">
           <div className="w-full lg:w-1/2 lg:px-4">
