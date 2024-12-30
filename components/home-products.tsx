@@ -4,7 +4,7 @@ export default function HomeProducts() {
   return (
     <div className="bg-white p-4 text-black lg:mx-10">
       <div className="mx-auto mt-4 p-4 text-black lg:w-4/5">
-        <h2 className="text-center text-2xl font-bold lg:text-start">Explore all products</h2>
+        <h2 className="text-center text-2xl font-bold lg:text-start">Featured Products</h2>
         <div className="mt-5 flex flex-wrap justify-between gap-y-4 py-3">
           <div className="relative w-full rounded-2xl lg:w-52">
             <CiHeart fontSize={24} className="absolute right-2 top-2" />
