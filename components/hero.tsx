@@ -17,7 +17,17 @@ export default function Hero() {
   };
 
   return (
-    <div className="h-screen bg-blue-600 bg-[url('/hero-image.png')] bg-cover bg-fixed bg-no-repeat">
+    <div className="h-screen bg-cover bg-fixed bg-no-repeat">
+      <video
+        autoPlay
+        muted
+        loop
+        id="background-video"
+        className="absolute left-0 top-0 -z-20 h-full w-full object-cover"
+      >
+        {' '}
+        <source src="/hero.mp4" type="video/mp4" /> Your browser does not support the video tag.{' '}
+      </video>
       <div className="flex h-screen w-full items-center justify-center bg-black/35">
         <div className="w-full max-w-2xl">
           <h1 className="text-center text-2xl font-bold lg:text-4xl">
