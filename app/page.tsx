@@ -1,4 +1,5 @@
 import BrandWorks from 'components/brand-works';
+import FeedBack from 'components/feedbacks';
 import NewFooter from 'components/footer';
 import Hero from 'components/hero';
 import HomeProducts from 'components/home-products';
@@ -19,6 +20,7 @@ export default function HomePage() {
       <br />
       <BrandWorks />
       <HomeProducts />
+      <FeedBack />
       <NewFooter />
       {/*       <ThreeItemGrid />
       <Carousel />
