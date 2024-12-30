@@ -13,7 +13,7 @@ export default function Benefits() {
             className="h-auto w-full"
           />
         </div>
-        <div className="relative h-full w-full lg:w-1/2 lg:px-16 lg:py-24">
+        <div className="relative h-full w-full lg:w-1/2 lg:px-12 lg:py-12 2xl:px-16 2xl:py-24">
           <div className="">
             <h1 className="my-3 text-3xl font-bold">Get a fair price for your car coding today</h1>
             <p className="my-3">
