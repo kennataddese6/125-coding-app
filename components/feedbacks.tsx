@@ -3,7 +3,7 @@ import { MdVerified } from 'react-icons/md';
 
 export default function FeedBack() {
   return (
-    <div className="bg-white p-4 text-black lg:mx-10">
+    <div className="bg-white p-4 text-black lg:mx-8">
       <div className="mx-auto mt-4 p-4 text-black lg:w-4/5">
         <h2 className="text-center text-2xl font-bold lg:text-start">What our customers say</h2>
         <div className="my-10 flex flex-wrap justify-between gap-4">
