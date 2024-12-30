@@ -1,4 +1,5 @@
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 
 export default function NewFooter() {
   return (
@@ -50,16 +51,28 @@ export default function NewFooter() {
           <h1 className="text-lg font-bold">Follow Us</h1>
           <ul>
             <li className="py-3">
-              <FaFacebook />
+              <Link href={'https://web.facebook.com/125coding/'}>
+                <FaFacebook />
+              </Link>
             </li>
             <li className="py-3">
-              <FaInstagram />
+              <Link href={'https://www.instagram.com/125coding/'}>
+                <FaInstagram />
+              </Link>
             </li>
             <li className="py-3">
-              <FaTwitter />
+              <Link
+                href={
+                  'https://api.whatsapp.com/send/?phone=447791179663&text&type=phone_number&app_absent=0'
+                }
+              >
+                <FaWhatsapp />
+              </Link>
             </li>
             <li className="py-3">
-              <FaYoutube />
+              <Link href={'https://www.youtube.com/channel/UCfWZU2kY-CN21Ycc0aX4L9Q'}>
+                <FaYoutube />
+              </Link>
             </li>
           </ul>
         </div>
