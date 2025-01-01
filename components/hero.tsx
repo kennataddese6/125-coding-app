@@ -54,7 +54,7 @@ export default function Hero() {
   const [model, setModel] = useState('');
   const [type, setType] = useState('');
   const [price, setPrice] = useState('');
-  const [emblaRef, emblaApi] = useEmblaCarousel({}, [Autoplay({ playOnInit: true, delay: 3000 })]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({}, [Autoplay({ playOnInit: true, delay: 4000 })]);
   const buildUrl = (baseUrl: any, params: any) => {
     const query = Object.keys(params)
       .filter((key) => params[key])
