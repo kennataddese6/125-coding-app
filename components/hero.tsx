@@ -1,13 +1,60 @@
 'use client';
+import Autoplay from 'embla-carousel-autoplay';
+import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+
+export const useAutoplay = (emblaApi: any) => {
+  const [autoplayIsPlaying, setAutoplayIsPlaying] = useState(false);
+
+  const onAutoplayButtonClick = useCallback(
+    (callback: any) => {
+      const autoplay = emblaApi?.plugins()?.autoplay;
+      if (!autoplay) return;
+
+      const resetOrStop =
+        autoplay.options.stopOnInteraction === false ? autoplay.reset : autoplay.stop;
+
+      resetOrStop();
+      callback();
+    },
+    [emblaApi]
+  );
+
+  const toggleAutoplay = useCallback(() => {
+    const autoplay = emblaApi?.plugins()?.autoplay;
+    if (!autoplay) return;
+
+    const playOrStop = autoplay.isPlaying() ? autoplay.stop : autoplay.play;
+    playOrStop();
+  }, [emblaApi]);
+
+  useEffect(() => {
+    const autoplay = emblaApi?.plugins()?.autoplay;
+    if (!autoplay) return;
+
+    setAutoplayIsPlaying(autoplay.isPlaying());
+    emblaApi
+      .on('autoplay:play', () => setAutoplayIsPlaying(true))
+      .on('autoplay:stop', () => setAutoplayIsPlaying(false))
+      .on('reInit', () => setAutoplayIsPlaying(autoplay.isPlaying()));
+  }, [emblaApi]);
+
+  return {
+    autoplayIsPlaying,
+    toggleAutoplay,
+    onAutoplayButtonClick
+  };
+};
+
 export default function Hero() {
   const router = useRouter();
   const [model, setModel] = useState('');
   const [type, setType] = useState('');
   const [price, setPrice] = useState('');
-
+  const [emblaRef, emblaApi] = useEmblaCarousel({}, [Autoplay({ playOnInit: true, delay: 3000 })]);
   const buildUrl = (baseUrl: any, params: any) => {
     const query = Object.keys(params)
       .filter((key) => params[key])
@@ -18,17 +65,34 @@ export default function Hero() {
 
   return (
     <div className="h-screen bg-cover bg-fixed bg-no-repeat">
-      <video
-        autoPlay
-        muted
-        loop
-        id="background-video"
-        className="absolute left-0 top-0 -z-20 h-full w-full object-cover"
-      >
-        {' '}
-        <source src="/hero.mp4" type="video/mp4" /> Your browser does not support the video tag.{' '}
-      </video>
-      <div className="flex h-screen w-full items-center justify-center bg-black/35">
+      <div className="embla relative -z-20 h-full text-black">
+        <div className="embla__viewport h-full" ref={emblaRef}>
+          <div className="embla__container h-full">
+            {[
+              '/hero1.jpg',
+              '/hero2.jpg',
+              '/hero3.jpg',
+              '/hero4.avif',
+              '/hero5.avif',
+              '/hero6.avif',
+              '/hero7.avif'
+            ].map((imageSrc, index) => (
+              <div className="embla__slide h-full" key={index}>
+                <div className="embla__slide__number h-full">
+                  <Image
+                    src={imageSrc}
+                    alt="Hero"
+                    width={500}
+                    height={500}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="absolute top-0 -z-10 flex h-screen w-full items-center justify-center bg-black/35">
         <div className="w-full max-w-2xl">
           <h1 className="text-center text-2xl font-bold lg:text-4xl">
             Smarter, Faster and Accurate Car Diagnosis you can trust
