@@ -23,9 +23,15 @@ export default function NewFooter() {
         <div className="w-full lg:w-auto">
           <h1 className="text-lg font-bold">Company</h1>
           <ul>
-            <li className="py-2">About us</li>
-            <li className="py-2">Contact us</li>
-            <li className="py-2">FAQ</li>
+            <li className="py-2">
+              <Link href={'/about'}>About us</Link>
+            </li>
+            <li className="py-2">
+              <Link href={'/contact'}>Contact us</Link>
+            </li>
+            <li className="py-2">
+              <Link href={'/about'}>FAQ</Link>
+            </li>
             <li className="py-2">Terms & conditions</li>
           </ul>
         </div>
