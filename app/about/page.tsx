@@ -21,9 +21,6 @@ export default function Page() {
             dedicated team working on cars and accessories. we are passionate aboutWe are a
             dedicated team working on cars and accessories. we are passionate about...
           </p>
-          <button className="mx-auto mt-3 block rounded-3xl bg-blue-500 px-6 py-2 text-white lg:mx-0">
-            Read More
-          </button>
           <h1 className="mt-8 text-center text-xl lg:text-start">Frequently Asked Questions</h1>
           <Accordion type="multiple" className="mt-4 w-full">
             <AccordionItem value="item-1">
