@@ -85,6 +85,7 @@ export default function Hero() {
                     width={500}
                     height={500}
                     className="h-full w-full object-cover"
+                    quality={100}
                   />
                 </div>
               </div>
