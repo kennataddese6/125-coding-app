@@ -78,14 +78,13 @@ export default function Hero() {
               '/hero7.avif'
             ].map((imageSrc, index) => (
               <div className="embla__slide h-full" key={index}>
-                <div className="embla__slide__number h-full">
+                <div className="embla__slide__number relative h-full w-full">
                   <Image
                     src={imageSrc}
                     alt="Hero"
-                    width={500}
-                    height={500}
                     className="h-full w-full object-cover"
                     quality={100}
+                    fill
                   />
                 </div>
               </div>
