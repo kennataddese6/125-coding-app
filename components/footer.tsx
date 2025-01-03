@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
+import { toast } from 'sonner';
 
 export default function NewFooter() {
   return (
@@ -15,7 +16,12 @@ export default function NewFooter() {
             placeholder="Your email address"
             className="mx-4 border-none bg-transparent pr-5 text-white focus:border-none focus:outline-none lg:min-w-64"
           />
-          <button className="rounded-full bg-blue-600 px-6 py-2">Sign Up</button>
+          <button
+            className="rounded-full bg-blue-600 px-6 py-2"
+            onClick={() => toast.success('success')}
+          >
+            Sign Up
+          </button>
         </div>
       </div>
       <div className="h-0.5 w-full bg-slate-500"></div>
