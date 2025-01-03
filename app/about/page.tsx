@@ -16,11 +16,23 @@ export default function Page() {
         <div className="p-3 lg:w-1/2 lg:p-5">
           <h1 className="text-center text-2xl lg:text-start">About us</h1>
           <p className="mt-3 text-center text-stone-700 lg:pr-4 lg:text-start">
-            We are a dedicated team working on cars and accessories. we are passionate aboutWe are a
-            dedicated team working on cars and accessories. we are passionate aboutWe are a
-            dedicated team working on cars and accessories. we are passionate aboutWe are a
-            dedicated team working on cars and accessories. we are passionate about...
+            At 125 Coding, we make your car smarter and more enjoyable to drive. Based in Dewsbury,
+            West Yorkshire, we work with many car brands, including BMW, Mini, Audi, VW, Seat, and
+            Skoda. Our services include: Apple CarPlay and Android Auto Setup: We connect your
+            smartphone to your car, so you can use your favorite apps while driving. Dash Camera
+            Installation: We install front and rear cameras to help keep you safe on the road.
+            Reverse Camera Systems: We add cameras to help you see behind your car when parking.
+            Vehicle Security Enhancements: We improve your car's security with devices like
+            immobilizers and tracking systems. Entertainment Upgrades: We upgrade your car's
+            entertainment system, allowing you to enjoy apps like YouTube and Netflix during your
+            journeys. Our team is skilled and experienced, using professional equipment to ensure
+            top-quality service. We respond quickly to all questions and have happy customers across
+            the country who have given us 5-star reviews. Join the 125 Coding family and turn your
+            car into a modern, secure, and fun space. Contact us today to see how we can improve
+            your driving experience.
           </p>
+        </div>
+        <div className="w-100 lg:w-1/2">
           <h1 className="mt-8 text-center text-xl lg:text-start">Frequently Asked Questions</h1>
           <Accordion type="multiple" className="mt-4 w-full">
             <AccordionItem value="item-1">
@@ -65,7 +77,7 @@ export default function Page() {
                 This is a question always asked which is a Yes & No. Yes depending on dealership as
                 they always try to wriggle out of any warranty claim. No as we offer a free service
                 to take off any coding before your vehicle goes in for service/warranty work and
-                reapply free of charge after. ​
+                reapply free of charge after.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5">
@@ -78,10 +90,8 @@ export default function Page() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+          {/* <Image src={'/team.png'} width={500} height={600} alt="team image" /> */}
         </div>
-        {/*     <div>
-          <Image src={'/team.png'} width={500} height={600} alt="team image" />
-        </div> */}
       </div>
       <NewFooter />
     </>
