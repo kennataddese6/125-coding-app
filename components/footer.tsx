@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 import { toast } from 'sonner';
