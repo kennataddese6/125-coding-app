@@ -38,19 +38,35 @@ export default function NewFooter() {
         <div className="w-full lg:w-auto">
           <h1 className="text-lg font-bold">Our Brands</h1>
           <ul>
-            <li className="py-2">Apple CarPlay</li>
-            <li className="py-2">Dash Cameras</li>
-            <li className="py-2">Reverse Cameras</li>
-            <li className="py-2">Vehicle Security</li>
+            <li className="py-2">
+              <Link href={'/products?type=apple-carplay'}>Apple CarPlay</Link>
+            </li>
+            <li className="py-2">
+              <Link href={'/products?type=dash-security'}>Dash Cameras</Link>
+            </li>
+            <li className="py-2">
+              <Link href={'/products?type=reverse-cameras'}>Reverse Cameras</Link>
+            </li>
+            <li className="py-2">
+              <Link href={'/products?type=vehicle-security'}>Vehicle Security</Link>
+            </li>
           </ul>
         </div>
         <div className="w-full lg:w-auto">
           <h1 className="text-lg font-bold">Vehicle Type</h1>
           <ul>
-            <li className="py-2">Ford</li>
-            <li className="py-2">Porsche</li>
-            <li className="py-2">Volswagen</li>
-            <li className="py-2">Land Rover</li>
+            <li className="py-2">
+              <Link href={'/products?model=audi'}>Audi</Link>
+            </li>
+            <li className="py-2">
+              <Link href={'/products?model=porshe'}>Porsche</Link>
+            </li>
+            <li className="py-2">
+              <Link href={'/products?model=volswagen'}>Volswagen</Link>
+            </li>
+            <li className="py-2">
+              <Link href={'/products?model=land-rover'}>Land Rover</Link>
+            </li>
           </ul>
         </div>
         <div className="w-full lg:w-auto">
