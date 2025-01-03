@@ -56,15 +56,15 @@ export default function Page() {
           <div className="w-full px-4 lg:w-1/2">
             <div className="mt-8 p-2">
               <FaMapMarkerAlt color="grey" className="mr-3 inline" />
-              956 Kings Street, Glendale, West California, United State of America
+              125 Ravensthorpe Road, Dewsbury, West Yorkshire, WF12 9EG
             </div>
             <div className="p-2">
               <FaPhone color="grey" className="mr-3 inline" />
-              +251991374186
+              +44 (0) 7791 179 663
             </div>
             <div className="p-2">
               <IoIosMail color="grey" className="mr-3 inline" fontSize={22} />
-              hello@info.com.org
+              info@125coding.co.uk
             </div>
             <div className="flex justify-around p-2 lg:hidden">
               <FaYoutube className="mr-3 inline cursor-pointer" fontSize={26} color="red" />
