@@ -1,3 +1,4 @@
+'use client';
 import NewFooter from 'components/footer';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
 import Link from 'next/link';
@@ -11,6 +12,7 @@ import {
   FaYoutube
 } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
+import { toast } from 'sonner';
 export default function Page() {
   return (
     <>
@@ -37,7 +39,7 @@ export default function Page() {
           </Link>
         </div>
         <div className="mx-12 mt-5 flex flex-wrap justify-between lg:p-5">
-          <div className="w-full lg:w-1/2 lg:px-4">
+          <form className="w-full lg:w-1/2 lg:px-4">
             <h1 className="text-center text-xl lg:text-start">Leave us a Message</h1>
             <label className="custom-field one w-full border">
               <input type="text" placeholder=" " className="w-full" />
@@ -51,8 +53,13 @@ export default function Page() {
               className="mt-5 h-32 w-full border border-slate-400 p-3 focus:outline-blue-500"
               placeholder="Message"
             ></textarea>
-            <button className="mt-4 w-full bg-blue-500 p-2 text-white">Send</button>
-          </div>
+            <button
+              className="mt-4 w-full bg-blue-500 p-2 text-white"
+              onClick={() => toast.success('Success', { duration: 10000 })}
+            >
+              Send
+            </button>
+          </form>
           <div className="w-full px-4 lg:w-1/2">
             <div className="mt-8 p-2">
               <FaMapMarkerAlt color="grey" className="mr-3 inline" />
@@ -74,7 +81,7 @@ export default function Page() {
             </div>
             <iframe
               className="mt-3 w-full rounded-lg"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13212.240487806208!2d-118.2320194751238!3d34.11921052543224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c1bc27d9d281%3A0x3e8918e0a4d56540!2sBub%20and%20Grandma&#39;s%20Restaurant!5e0!3m2!1sen!2set!4v1735491952551!5m2!1sen!2set"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1323.6731460079986!2d-1.6567640472979175!3d53.67454890454261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bdf7c5e36c42b%3A0xc1100677bb039c26!2s125%20Ravensthorpe%20Rd%2C%20Dewsbury%20WF12%209EG%2C%20UK!5e0!3m2!1sen!2set!4v1735883699360!5m2!1sen!2set"
               width="300"
               height="200"
               allowFullScreen={true}
