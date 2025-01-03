@@ -125,7 +125,7 @@ export default function Hero() {
                 <option value={'apple-carplay'}>Apple Car Play</option>
                 <option value={'reverse-cameras'}>Reverse Cameras</option>
                 <option value={'vehicle-security'}>Vechile Security</option>
-                <option value={'dash-camera'}>Dash Camera</option>
+                <option value={'dash-security'}>Dash Camera</option>
                 <option value={'entertainment'}>Entertainment</option>
               </select>
               <select
