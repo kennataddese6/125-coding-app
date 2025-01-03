@@ -38,7 +38,9 @@ export default function NewFooter() {
             <li className="py-2">
               <Link href={'/about'}>FAQ</Link>
             </li>
-            <li className="py-2">Terms & conditions</li>
+            <li className="py-2">
+              <Link href={'/about'}>Terms & Conditions</Link>
+            </li>
           </ul>
         </div>
         <div className="w-full lg:w-auto">
