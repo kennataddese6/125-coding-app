@@ -92,7 +92,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="absolute top-0 z-10 flex h-screen w-full items-center justify-center bg-black/35">
+      <div className="absolute top-0 -z-10 flex h-screen w-full items-center justify-center bg-black/35">
         <div className="w-full max-w-2xl">
           <h1 className="text-center text-2xl font-bold lg:text-4xl">
             Smarter, Faster and Accurate Car Diagnosis you can trust
