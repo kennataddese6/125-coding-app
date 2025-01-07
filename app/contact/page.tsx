@@ -1,7 +1,9 @@
 'use client';
+import emailjs from '@emailjs/browser';
 import NewFooter from 'components/footer';
 import { BlackNavbar } from 'components/layout/navbar/black-navbar';
 import Link from 'next/link';
+import { useRef } from 'react';
 import {
   FaFacebook,
   FaInstagram,
@@ -14,6 +16,28 @@ import {
 import { IoIosMail } from 'react-icons/io';
 import { toast } from 'sonner';
 export default function Page() {
+  const form: any = useRef(null);
+  const sendEmail = (formData: FormData) => {
+    try {
+      emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_KEY || '',
+        process.env.NEXT_PUBLIC_TEMPLATEID || '',
+        {
+          user_name: formData.get('user_name'),
+          user_email: formData.get('user_email'),
+          message: formData.get('message'),
+          email: process.env.NEXT_PUBLIC_EMAIL
+        },
+        {
+          publicKey: process.env.NEXT_PUBLIC_KEY
+        }
+      );
+      form.current?.reset();
+      toast.success('Sucess');
+    } catch (error: any) {
+      toast.error('error');
+    }
+  };
   return (
     <>
       <BlackNavbar />
@@ -39,23 +63,26 @@ export default function Page() {
           </Link>
         </div>
         <div className="mx-12 mt-5 flex flex-wrap justify-between lg:p-5">
-          <form className="w-full lg:w-1/2 lg:px-4">
+          <form className="w-full lg:w-1/2 lg:px-4" action={sendEmail}>
             <h1 className="text-center text-xl lg:text-start">Leave us a Message</h1>
             <label className="custom-field one w-full border">
-              <input type="text" placeholder=" " className="w-full" />
+              <input type="text" placeholder=" " className="w-full" name="user_name" required />
               <span className="customplaceholder">Full Name</span>
             </label>
             <label className="custom-field one w-full border">
-              <input type="text" placeholder=" " className="w-full" />
+              <input type="text" placeholder=" " className="w-full" name="user_email" required />
               <span className="customplaceholder">Email</span>
             </label>
             <textarea
               className="mt-5 h-32 w-full border border-slate-400 p-3 focus:outline-blue-500"
               placeholder="Message"
+              name="message"
+              required
             ></textarea>
             <button
               className="mt-4 w-full bg-blue-500 p-2 text-white"
-              onClick={() => toast.success('Success', { duration: 10000 })}
+              // onClick={() => toast.success('Success', { duration: 10000 })}
+              type="submit"
             >
               Send
             </button>
