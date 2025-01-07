@@ -49,7 +49,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <CartProvider cartPromise={cart}>
           <main>
             {children}
-            <Toaster closeButton />
+            <Toaster closeButton richColors />
             <WelcomeToast />
           </main>
         </CartProvider>
