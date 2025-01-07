@@ -21,18 +21,17 @@ export default function FeedBack() {
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.5, delay: 0.5, ease: 'easeOut' }}
           >
+            <h3 className="my-1 inline font-semibold">Julian Cooke</h3>
+            <MdVerified className="ml-1 mr-1 inline" color="blue" />
+            <br />
             <FaStar className="inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
-            <MdVerified className="ml-3 mr-1 inline" color="grey" />
-            <span className="text-gray-600">Verified</span>
-            <h3 className="mb-1 mt-3 font-semibold">Fantastic service, highly recommended</h3>
-            <p className="text-sm">
+            <p className="py-1">
               Buzzing to get rid of buzzing on my sprinter, fantastic service could highly recomm...
             </p>
-            <h3 className="my-1 font-semibold">Julian Cooke</h3>
           </motion.div>
 
           <motion.div
@@ -41,19 +40,19 @@ export default function FeedBack() {
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.5, delay: 0.7, ease: 'easeOut' }}
           >
+            <h3 className="my-1 inline font-semibold">Will Naylor</h3>
+            <MdVerified className="ml-1 mr-1 inline" color="blue" />
+            <br />
             <FaStar className="inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="grey" />
-            <MdVerified className="ml-3 mr-1 inline" color="grey" />
-            <span className="text-gray-600">Verified</span>
-            <h3 className="mb-1 mt-3 font-semibold">Nice Genuine service</h3>
-            <p className="text-sm">
+
+            <p className="py-2">
               I drive cutting out in my 4 series BMW took it there and was sorted within the hour
               nice...
             </p>
-            <h3 className="my-1 font-semibold">Will Naylor</h3>
           </motion.div>
           <motion.div
             className="max-w-72"
@@ -61,19 +60,18 @@ export default function FeedBack() {
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.5, delay: 0.9, ease: 'easeOut' }}
           >
+            <h3 className="my-1 inline font-semibold">Adam Jasat</h3>
+            <MdVerified className="ml-1 mr-1 inline" color="blue" />
+            <br />
             <FaStar className="inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
             <FaStar className="ml-0.5 inline" color="gold" />
-            <MdVerified className="ml-3 mr-1 inline" color="grey" />
-            <span className="text-gray-600">Verified</span>
-            <h3 className="mb-1 mt-3 font-semibold">Fantastic Customer service</h3>
-            <p className="text-sm">
+            <p className="py-1">
               Fantastic customer service provided by Aadil at 125 Coding. I had a dash cam filtered
-              in my vw Golf which was fitted{' '}
+              in my vw Golf which was{' '}
             </p>
-            <h3 className="my-1 font-semibold">Adam Jasat</h3>
           </motion.div>
         </div>
       </div>
