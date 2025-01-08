@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import './styles.css';
 export default function BrandWorks() {
   return (
-    <div className="-mt-16 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:-mt-20 lg:rounded-3.5xl">
+    <div className="relative z-10 -mt-16 rounded-3xl bg-white p-4 text-black lg:mx-10 lg:-mt-20 lg:rounded-3.5xl">
       <div className="mx-auto mt-4 p-4 lg:w-4/5">
         <h2 className="text-center text-2xl font-bold lg:text-start">Brands we have worked on</h2>
       </div>
