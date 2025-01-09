@@ -45,7 +45,7 @@ export default function NewFooter() {
           </ul>
         </div>
         <div className="w-full lg:w-auto">
-          <h1 className="text-lg font-bold">Our Brands</h1>
+          <h1 className="text-lg font-bold">Our Products</h1>
           <ul>
             <li className="py-2">
               <Link href={'/products?type=apple-carplay'}>Apple CarPlay</Link>
