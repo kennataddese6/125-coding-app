@@ -133,11 +133,12 @@ export default function Hero() {
                 onChange={(e) => setPrice(e.target.value)}
               >
                 <option>Any Price</option>
-                <option value={'0-100'}>100$</option>
-                <option value={'100-200'}>200$</option>
-                <option value={'200-300'}>300$</option>
-                <option value={'300-400'}>400$</option>
-                <option value={'400-500'}>500$</option>
+                <option value={'0-500'}>500$</option>
+                <option value={'500-1000'}>$1k</option>
+                <option value={'1000-1500'}>$1.5k</option>
+                <option value={'1500-2000'}>$2k</option>
+                <option value={'2000-2500'}>$2.5k</option>
+                <option value={'2500-3000'}>$3k</option>
               </select>
               <button
                 className="m-1 hidden rounded-full bg-blue-600 px-8 py-3 text-white lg:block"
