@@ -238,57 +238,68 @@ export default function ProductFilter() {
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="0-100"
-              checked={urlPriceSearch.some((a) => a === '0-100')}
+              id="0-500"
+              checked={urlPriceSearch.some((a) => a === '0-500')}
               onChange={(e) =>
-                e.target.checked ? createPriceQuery('0-100') : deletePriceQuery('0-100')
+                e.target.checked ? createPriceQuery('0-500') : deletePriceQuery('0-500')
               }
             />
-            <label htmlFor="0-100">Less than 100$</label>
+            <label htmlFor="0-500">0 to 500$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="100-200"
-              checked={urlPriceSearch.some((a) => a === '100-200')}
+              id="500-1000"
+              checked={urlPriceSearch.some((a) => a === '500-1000')}
               onChange={(e) =>
-                e.target.checked ? createPriceQuery('100-200') : deletePriceQuery('100-200')
+                e.target.checked ? createPriceQuery('500-1000') : deletePriceQuery('500-1000')
               }
             />
-            <label htmlFor="100-200">100$ up to 200$</label>
+            <label htmlFor="500-1000">500$ up to 1000$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="200-300"
-              checked={urlPriceSearch.some((a) => a === '200-300')}
+              id="1000-1500"
+              checked={urlPriceSearch.some((a) => a === '1000-1500')}
               onChange={(e) =>
-                e.target.checked ? createPriceQuery('200-300') : deletePriceQuery('200-300')
+                e.target.checked ? createPriceQuery('1000-1500') : deletePriceQuery('1000-1500')
               }
             />
-            <label htmlFor="200-300">200$ up to 300$</label>
+            <label htmlFor="1000-1500">1000$ up to 1500$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="300-400"
-              checked={urlPriceSearch.some((a) => a === '300-400')}
+              id="1500-2000"
+              checked={urlPriceSearch.some((a) => a === '1500-2000')}
               onChange={(e) =>
-                e.target.checked ? createPriceQuery('300-400') : deletePriceQuery('300-400')
+                e.target.checked ? createPriceQuery('1500-2000') : deletePriceQuery('1500-2000')
               }
             />
-            <label htmlFor="300-400">300$ up to 400$</label>
+            <label htmlFor="1500-2000">1500$ up to 2000$</label>
           </div>
           <div className="my-2 flex items-center gap-3">
             <input
               type="checkbox"
-              id="400-500"
-              checked={urlPriceSearch.some((a) => a === '400-500')}
+              id="2000-2500"
+              checked={urlPriceSearch.some((a) => a === '2000-2500')}
               onChange={(e) =>
-                e.target.checked ? createPriceQuery('400-500') : deletePriceQuery('400-500')
+                e.target.checked ? createPriceQuery('2000-2500') : deletePriceQuery('2000-2500')
               }
             />
-            <label htmlFor="400-500">400$ up to 500$</label>
+            <label htmlFor="2000-2500">2000$ up to 2500$</label>
+          </div>
+          <div className="my-2 flex items-center gap-3">
+            <input
+              type="checkbox"
+              id="2500-3000"
+              checked={urlPriceSearch.some((a) => a === '2500-3000')}
+              onChange={(e) =>
+                e.target.checked ? createPriceQuery('2500-3000') : deletePriceQuery('2500-3000')
+              }
+            />
+            <label htmlFor="2500-3000">2500$ up to 3000$</label>
           </div>
         </AccordionContent>
       </AccordionItem>
