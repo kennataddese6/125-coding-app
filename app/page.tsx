@@ -7,7 +7,7 @@ import HomeProducts from 'components/home-products';
 import { Navbar } from 'components/layout/navbar';
 
 export const metadata = {
-  description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
+  description: 'Quality Products for you car in the UK',
   openGraph: {
     type: 'website'
   }
